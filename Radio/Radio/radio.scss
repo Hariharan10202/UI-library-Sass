@@ -1,0 +1,48 @@
+@use "../../Base/Alignment_mixin/alignment.scss" as *;
+@use "../Radio_anatomy/radio_anatomy.scss" as *;
+@use "../../Base/Misc/Misc.scss" as *;
+@use "../../Base/Typography/typography.scss";
+@use "../../Base/Colors/color.scss";
+
+* {
+  @include begin;
+}
+
+body {
+  padding: 20px;
+}
+
+.radio {
+  margin: 20px 0;
+  @include display-flex(center, flex-start, 20px);
+  div {
+    cursor: $pointer;
+    @include display-flex(center, center, 5px);
+    input {
+      pointer-events: $disabled-state;
+      @include radio;
+    }
+    span {
+      pointer-events: $disabled-state;
+      font-size: typography.$font-m;
+    }
+  }
+}
+
+.radio-disabled {
+  margin: 20px 0;
+  @include display-flex(center, flex-start, 20px);
+  div {
+    cursor: $pointer;
+    pointer-events: $disabled-state;
+    @include display-flex(center, center, 5px);
+    input {
+      @include radio;
+      accent-color: color.$disabled-color;
+    }
+    span {
+      font-size: typography.$font-m;
+      color: color.$disabled-color;
+    }
+  }
+}

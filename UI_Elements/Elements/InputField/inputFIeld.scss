@@ -1,0 +1,178 @@
+@use "../../../Base/Spacing/spacing.scss";
+@use "../../../Base/Borders/borderproperty.scss";
+@use "../../../Base/Misc/Misc.scss";
+@use "../../../Base/Typography/typography.scss" as *;
+@use "../../../Base/Alignment_mixin/alignment.scss" as *;
+@use "../../../Base/Iconography/iconography.scss" as *;
+@use "../../../Base/Borders/borderproperty.scss" as *;
+
+@mixin inputField($icon: dropdown, $writable: false) {
+  @include display-flex(center, center, 10px);
+
+  padding: spacing.$p-10;
+  border: borderproperty.$input-border;
+  width: Misc.$width-fit;
+  border-radius: borderproperty.$radius;
+  height: Misc.$height;
+  cursor: Misc.$pointer;
+
+  input {
+    border: borderproperty.$border-none;
+    font-size: $font-m;
+    @include text-overflow;
+    outline: Misc.$disabled-state;
+    @if $writable == false {
+      cursor: Misc.$pointer;
+      pointer-events: Misc.$disabled-state;
+    }
+  }
+
+  &:focus-within {
+    border: borderproperty.$focus-border;
+  }
+
+  small:first-child {
+    @include icon-large;
+    @include search;
+    pointer-events: Misc.$disabled-state;
+  }
+
+  small:last-child {
+    @include icon-medium;
+    @if $icon == search {
+      @include search;
+    } @else {
+      @include downarrow-medium;
+      pointer-events: Misc.$disabled-state;
+    }
+  }
+}
+
+@mixin inputField-Label() {
+  @include display-flex(flex-start, center, 5px, column);
+  div:nth-child(1) {
+    @include display-flex(flex-start, center, 5px, row);
+    small {
+      @include icon-medium;
+    }
+    label {
+      font-size: $font-xm;
+    }
+  }
+  div:nth-child(2) {
+    @include inputField();
+  }
+}
+
+@mixin inner-input() {
+  width: Misc.$width-100p;
+  padding: spacing.$p-15;
+  @include display-flex(center, center, 0, row);
+  div[class$="inn-inp"] {
+    @include inputField(search, writable);
+  }
+  small[class$="search"] {
+    @include search;
+  }
+}
+
+@mixin showCloseAction {
+  opacity: Misc.$opacity-1 !important;
+}
+
+@mixin hideCloseAction {
+  opacity: Misc.$opacity-0;
+  transition: Misc.$transistion;
+}
+
+@mixin autopop-inp() {
+  @include display-flex(flex-start, center, 5px, column);
+  div:nth-child(2) {
+    width: Misc.$width-100p;
+    padding: spacing.$p-15;
+    @include display-flex(center, center, 0, row);
+
+    @include inputField(search, writable);
+
+    small:first-child {
+      @include icon-medium;
+    }
+
+    small:last-child {
+      @include icon-small;
+      @include close-small;
+    }
+  }
+}
+
+@mixin grow-inp() {
+  @include display-flex(flex-start, center, 5px, column);
+  div[class$="growing-inp"] {
+    padding: spacing.$p-15;
+    @include display-flex(center, flex-start, 10px, row);
+    padding: spacing.$p-10;
+    border: borderproperty.$input-border;
+    border-radius: borderproperty.$radius;
+    min-width: Misc.$width-250;
+    max-width: Misc.$width-400;
+    min-height: Misc.$height;
+    max-height: Misc.$height-500;
+    overflow: Misc.$overflow-scroll;
+    cursor: Misc.$pointer;
+    flex-wrap: wrap;
+
+    input {
+      border: borderproperty.$border-none;
+      outline: Misc.$disabled-state;
+    }
+
+    small:first-child {
+      @include icon-medium;
+    }
+
+    small:last-child {
+      @include icon-small;
+      @include close-xsmall;
+    }
+  }
+}
+
+@mixin twoline-autopop-inp() {
+  @include display-flex(flex-start, center, 5px, column);
+  div:nth-child(2) {
+    @include display-flex(center, center, 0, row);
+
+    padding: spacing.$p-10;
+    border: borderproperty.$input-border;
+    width: Misc.$width-fit;
+    border-radius: borderproperty.$radius;
+    height: Misc.$height;
+    cursor: Misc.$pointer;
+
+    div[class$="twoline-inn"] {
+      border: $border-none;
+      @include display-flex(flex-start, flex-start, 0, column);
+
+      input {
+        border: $border-none;
+        outline: Misc.$disabled-state;
+        font-size: $font-m;
+        pointer-events: all;
+      }
+      span {
+        display: Misc.$display-none;
+        font-size: $font-s;
+      }
+    }
+
+    small:first-child {
+      @include icon-medium;
+    }
+
+    small:last-child {
+      @include icon-small;
+      @include close-small;
+      @include hideCloseAction;
+    }
+  }
+}

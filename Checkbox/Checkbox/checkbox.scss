@@ -1,0 +1,49 @@
+@use "../../Base/Alignment_mixin/alignment.scss" as *;
+@use "../Checkbox_anatomy/Checkbox_anatomy.scss" as *;
+@use "../../Base/Misc/Misc.scss" as *;
+@use "../../Base/Typography/typography.scss";
+@use "../../Base/Colors/color.scss";
+// @use "../../Base/Misc/Misc.scss";
+
+* {
+  @include begin;
+}
+
+body {
+  padding: 20px;
+}
+
+.checkbox {
+  margin: 20px 0;
+  @include display-flex(center, flex-start, 20px);
+  div {
+    cursor: $pointer;
+    @include display-flex(center, center, 5px);
+    input {
+      @include checkbox;
+      pointer-events: $disabled-state;
+    }
+    span {
+      font-size: typography.$font-m;
+      pointer-events: $disabled-state;
+    }
+  }
+}
+
+.checkbox-disabled {
+  margin: 20px 0;
+  @include display-flex(center, flex-start, 20px);
+  div {
+    cursor: $pointer;
+    pointer-events: $disabled-state;
+    @include display-flex(center, center, 5px);
+    input {
+      @include checkbox;
+      accent-color: color.$disabled-color;
+    }
+    span {
+      font-size: typography.$font-m;
+      color: color.$disabled-color;
+    }
+  }
+}

@@ -1,0 +1,188 @@
+@use "../../../Base/Alignment_mixin/alignment.scss" as *;
+@use "../../../Base/Misc/Misc.scss" as *;
+@use "../../../Base/Spacing/spacing.scss" as *;
+@use "../../../Base/Borders/borderproperty.scss" as *;
+@use "../../../Base/Colors/color.scss" as *;
+@use "../../../Base/Typography/typography.scss" as *;
+@use "../../../Base/Iconography/iconography.scss" as *;
+
+@mixin dropdown-lists($doneBtn) {
+  // @include display-flex(flex-start, flex-start, 0, column);
+  box-shadow: $box-shadow;
+  border-radius: $radius;
+  width: $width-fit;
+  position: $poa;
+  // top: 60px;
+  z-index: $z-99;
+  background-color: $white;
+
+  @if $doneBtn {
+    div[class$="multiSelect-list"],
+    div[class$="autopop-list"] {
+      overflow: $overflow-scroll;
+      max-height: $height-200;
+    }
+  } @else {
+    overflow: $overflow-scroll;
+    max-height: $height-100;
+  }
+
+  @include hideDropdown();
+
+  li {
+    list-style: none;
+    display: $display-block;
+    cursor: $pointer;
+    background-color: $white;
+
+    div {
+      pointer-events: $disabled-state;
+      padding: $p-20;
+      width: $width-100p;
+      height: $list-height;
+      @include display-flex(center, flex-start, 10px, row);
+      small {
+        b {
+          @include icon-medium;
+          @include userprofile;
+        }
+      }
+      span {
+        cursor: $pointer;
+        font-size: $font-m;
+        pointer-events: $disabled-state;
+        @include text-overflow;
+      }
+    }
+    &:hover {
+      background-color: $list-hovered-bg;
+      //   span {
+      //     color: $list-hovered-color;
+      //   }
+    }
+  }
+}
+
+@mixin hideDropdown {
+  opacity: $opacity-0;
+  pointer-events: $disabled-state;
+  transition: $transistion;
+}
+
+@mixin showDropdown {
+  opacity: $opacity-1;
+  pointer-events: $abled-state;
+}
+
+@mixin hideTooltip {
+  pointer-events: $disabled-state;
+  transition: $transistion;
+  transform: scale(0);
+}
+
+@mixin showTooltip {
+  pointer-events: $abled-state;
+  transform: scale(100%);
+}
+
+@mixin currentSelectedList {
+  color: $list-hovered-color;
+  background-color: $list-hovered-bg;
+}
+
+@mixin currentDisabledList {
+  color: $disabled-color;
+  // background-color: $disabled-backgroundColor;
+  pointer-events: $disabled-state;
+}
+
+@mixin list-heading() {
+  @include display-flex(center, space-between, 0, row);
+  padding: $p-10;
+  background-color: $list-header;
+  width: $width-100p;
+  span {
+    font-weight: $font-bold;
+    font-size: $font-m;
+  }
+  div {
+    @include display-flex(center, center, 10px, row);
+    span {
+      cursor: $pointer;
+      color: $hyperBtn;
+      &:hover {
+        color: $hyperBtnHovered;
+      }
+    }
+  }
+}
+
+@mixin NotFound($squ) {
+  display: none;
+  @if $squ == true {
+    padding: $p-15;
+  } @else {
+    padding: $p-lb-15;
+  }
+  span {
+    font-weight: $font-bold;
+    color: black;
+    font-size: $font-m;
+  }
+}
+
+@mixin two-line-dropdown() {
+  box-shadow: $box-shadow;
+  border-radius: $radius;
+  width: $width-fit;
+  position: $poa;
+  top: 60px;
+  z-index: $z-999;
+  background-color: $white;
+
+  div[class$="multiSelect-list"] {
+    overflow: $overflow-scroll;
+    // height: $height-auto;
+    max-height: $height-200;
+    // min-height: $height-100;
+  }
+
+  @include hideDropdown();
+
+  li {
+    list-style: none;
+    display: $display-block;
+    cursor: $pointer;
+    background-color: $white;
+
+    div {
+      pointer-events: $disabled-state;
+      padding: $p-10;
+      width: auto;
+      height: $twoline-list-height;
+      @include display-flex(center, flex-start, 5px, row);
+      div {
+        @include display-flex(center, center, 5px, column);
+        span:first-child {
+          font-size: $font-m;
+        }
+        span:last-child {
+          font-size: $font-s;
+        }
+      }
+    }
+    &:hover {
+      background-color: $list-hovered-bg;
+      //   span {
+      //     color: $list-hovered-color;
+      //   }
+    }
+  }
+}
+
+@mixin helper-text {
+  span {
+    font-size: $font-s;
+    position: $poa;
+  }
+}

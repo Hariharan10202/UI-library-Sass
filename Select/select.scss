@@ -1,0 +1,30 @@
+@use "../Base/Misc/Misc.scss" as *;
+@use "../UI_Elements/Elements/InputField/inputFIeld.scss" as *;
+@use "../UI_Elements/Elements/Dropdown/Dropdown_anatomy.scss" as *;
+@use "../Base/Typography/typography.scss" as *;
+* {
+  @include begin;
+}
+
+div[class$="select"] {
+  position: relative;
+
+  margin: 20px;
+  div[class="inp-l"] {
+    @include inputField-Label;
+  }
+  div[class*="select-lists"] {
+    @include dropdown-lists(false);
+    li[class$="currentSelectedList"] {
+      @include currentSelectedList;
+    }
+  }
+
+  div[class$="helper-text"] {
+    @include helper-text;
+  }
+
+  div[class*="showDropdown"] {
+    @include showDropdown;
+  }
+}

@@ -1,0 +1,15 @@
+@use "../../Base/Spacing/spacing.scss";
+@use "../../Base/Borders/borderproperty.scss";
+@use "../../Base/Colors/color.scss";
+@use "../../Base/Typography/typography.scss";
+@use "../../Base/Misc/Misc.scss";
+
+@mixin checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+@mixin checkbox-disabled {
+  width: 20px;
+  height: 20px;
+}

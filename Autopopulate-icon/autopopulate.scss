@@ -1,0 +1,64 @@
+@use "../Base/Misc/Misc.scss" as *;
+@use "../UI_Elements/Elements/InputField/inputFIeld.scss" as *;
+@use "../UI_Elements/Elements/Dropdown/Dropdown_anatomy.scss" as *;
+@use "../Base/Typography/typography.scss" as *;
+@use "../Base/Alignment_mixin/alignment.scss" as *;
+@use "../Base/Iconography/iconography.scss" as *;
+
+* {
+  @include begin;
+}
+
+div[class$="autopop-icon"] {
+  position: relative;
+  margin: 20px;
+
+  @include display-flex(flex-start, flex-start, 10px, row);
+  div {
+    small {
+      @include icon-large;
+      @include userprofile;
+    }
+  }
+
+  div[class="inp-l"] {
+    @include autopop-inp;
+
+    small[class$="hideCloseAction"] {
+      @include hideCloseAction;
+    }
+
+    small[class$="showCloseAction"] {
+      @include showCloseAction;
+    }
+  }
+
+  div[class*="autopop-lists"] {
+    @include dropdown-lists(true);
+
+    li[class$="currentSelectedList"] {
+      @include currentSelectedList;
+    }
+
+    div[class$="li-head-wrap"] {
+      div {
+        @include list-heading;
+      }
+    }
+
+    div[class$="autopop-list"] {
+      div[class$="notFound"] {
+        @include NotFound(true);
+        padding-top: 15px;
+      }
+    }
+  }
+
+  div[class$="helper-text"] {
+    @include helper-text;
+  }
+
+  div[class*="showDropdown"] {
+    @include showDropdown;
+  }
+}

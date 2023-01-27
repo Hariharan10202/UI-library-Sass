@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./autopopulate.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="autopop-icon">
+      <div><small></small></div>
+      <div class="autopop">
+        <div class="inp-l">
+          <div><label for="">Label</label></div>
+          <div class="mainInput">
+            <small></small
+            ><input type="text" placeholder="Type 1st three letters..." /><small
+              class="hideCloseAction"
+              onclick="clearAutopopulate(event)"
+            ></small>
+          </div>
+        </div>
+        <div class="helper-text"><span>Helper text</span></div>
+        <div class="autopop-lists">
+          <div class="li-head-wrap">
+            <div>
+              <span>List Heading</span>
+            </div>
+          </div>
+          <div class="autopop-list">
+            <li class="ind-li" onclick="autopopHandler(event)">
+              <div>
+                <span>Option 1</span>
+              </div>
+            </li>
+            <li class="ind-li" onclick="autopopHandler(event)">
+              <div>
+                <span>Option 2</span>
+              </div>
+            </li>
+            <li class="ind-li" onclick="autopopHandler(event)">
+              <div><span>Option 3</span></div>
+            </li>
+            <li class="ind-li" onclick="autopopHandler(event)">
+              <div><span>Option 4</span></div>
+            </li>
+            <li class="ind-li" onclick="autopopHandler(event)">
+              <div><span>Option 5</span></div>
+            </li>
+            <div class="notFound"><span>No Results Found</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

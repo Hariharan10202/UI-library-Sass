@@ -1,0 +1,13 @@
+@use "../UI_Elements/Elements/Accordion/accordion_anatomy.scss" as *;
+@use "../Base/Misc/Misc.scss" as *;
+* {
+  @include begin;
+}
+
+div[class$="Accordion"] {
+  margin: 20px;
+  @include accordion;
+  div[class*="showAccord"] {
+    max-height: 200px;
+  }
+}

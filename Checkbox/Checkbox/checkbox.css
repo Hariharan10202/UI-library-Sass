@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: lato;
+}
+
+body {
+  padding: 20px;
+}
+
+.checkbox {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 20px;
+}
+.checkbox div {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+}
+.checkbox div input {
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+.checkbox div span {
+  font-size: 13px;
+  pointer-events: none;
+}
+
+.checkbox-disabled {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 20px;
+}
+.checkbox-disabled div {
+  cursor: pointer;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+}
+.checkbox-disabled div input {
+  width: 20px;
+  height: 20px;
+  accent-color: #888888;
+}
+.checkbox-disabled div span {
+  font-size: 13px;
+  color: #888888;
+}/*# sourceMappingURL=checkbox.css.map */

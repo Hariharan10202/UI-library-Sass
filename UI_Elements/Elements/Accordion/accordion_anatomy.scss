@@ -1,0 +1,40 @@
+@use "../../../Base/Typography/typography.scss" as *;
+@use "../../../Base/Alignment_mixin/alignment.scss" as *;
+@use "../../../Base/Iconography/iconography.scss" as *;
+@use "../../../Base/Misc/Misc.scss" as *;
+@use "../../../Base/Borders/borderproperty.scss";
+@use "../../../Base/Spacing/spacing.scss" as *;
+@use "../../../Base/Colors/color.scss" as *;
+
+@mixin accordion {
+  @include display-flex(flex-start, flex-start, 10px, column);
+  div:nth-child(1) {
+    background-color: $white;
+    border-bottom: borderproperty.$input-border;
+    width: $width-100p;
+    @include display-flex(center, space-between, 0, row);
+    cursor: $pointer;
+    padding: $p-10;
+    span {
+      font-size: $font-xm;
+      font-weight: $font-bold;
+    }
+    small {
+      @include icon-medium;
+      @include downarrow-medium();
+    }
+    &:hover {
+      background-color: $list-hovered-bg;
+    }
+  }
+
+  div:nth-child(2) {
+    // max-height: 20px;
+    max-height: 0;
+    transition: max-height 0.1s linear;
+    overflow: hidden;
+    p {
+      line-height: $p-20;
+    }
+  }
+}

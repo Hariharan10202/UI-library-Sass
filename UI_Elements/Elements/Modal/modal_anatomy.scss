@@ -1,0 +1,116 @@
+@use "../../../Base/Misc/Misc.scss" as *;
+@use "../../../Base/Colors/color.scss" as *;
+@use "../../../Base/Spacing/spacing.scss" as *;
+@use "../../../Base/Borders/borderproperty.scss" as *;
+@use "../../../Base/Iconography/iconography.scss" as *;
+@use "../../../Base/Alignment_mixin/alignment.scss" as *;
+@use "../../../Base/Misc/Misc.scss" as *;
+@use "../../../Button/Button_Anatomy/button_anatomy.scss" as *;
+@use "../../../Base/Typography/typography.scss" as *;
+
+@mixin modal-position {
+  position: $poa;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@mixin hideBackdrop {
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.1s ease-in-out;
+}
+
+@mixin showBackdrop {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@mixin modal() {
+  @include modal-position;
+  box-shadow: $box-shadow;
+  background-color: $white;
+  border-radius: $radius;
+
+  div:nth-child(1) {
+    @include display-flex(center, space-between, 0, row);
+    padding: $p-20;
+    border-bottom: $input-border;
+
+    h2 {
+      font-size: $font-l;
+    }
+
+    small {
+      @include icon-large;
+      @include close-large;
+      cursor: $pointer;
+    }
+  }
+  div:nth-child(2) {
+    padding: $p-20;
+    border-bottom: $input-border;
+    @include display-flex(flex-start, flex-start, 10px, column);
+    h2 {
+      font-size: $font-xm;
+    }
+  }
+  div:nth-child(3) {
+    padding: $p-20;
+
+    @include display-flex(flex-start, flex-end, 20px, row);
+    button:nth-child(2),
+    button:nth-child(1) {
+      @include button;
+    }
+
+    button:nth-child(2) {
+      @include primary-button;
+    }
+
+    button:nth-child(1) {
+      @include secondary-button;
+    }
+  }
+}
+
+@mixin backdrop {
+  width: $width-100p;
+  height: $width-100p;
+  @include modal-position;
+  background-color: $backdrop-color;
+}
+
+@mixin conf-modal {
+  @include modal-position;
+  box-shadow: $box-shadow;
+  background-color: $white;
+  border-radius: $radius;
+
+  div:nth-child(1) {
+    padding: $p-20;
+    border-bottom: $input-border;
+    h2 {
+      font-size: $font-xm;
+    }
+  }
+
+  div:nth-child(2) {
+    padding: $p-20;
+
+    @include display-flex(flex-start, flex-end, 20px, row);
+    button:nth-child(2),
+    button:nth-child(1) {
+      @include button;
+    }
+
+    button:nth-child(2) {
+      @include primary-button;
+    }
+
+    button:nth-child(1) {
+      @include secondary-button;
+    }
+  }
+}

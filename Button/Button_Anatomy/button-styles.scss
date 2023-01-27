@@ -1,0 +1,32 @@
+@use "../Button_Anatomy/button_anatomy.scss" as *;
+@use "../../Base/Alignment_mixin/alignment.scss" as *;
+@use "../../Base/Iconography/iconography.scss" as *;
+
+@mixin select-button-row($varient) {
+  @if $varient == multiple-varient {
+    button {
+      @include button;
+      @include secondary-button;
+    }
+  } @else if $varient == multiple-varient {
+    button:nth-child(3) {
+      @include button;
+      @include primary-button;
+    }
+
+    button:nth-child(2) {
+      @include button;
+      @include secondary-button;
+    }
+
+    button:nth-child(1) {
+      @include button;
+      @include tertiary-button;
+    }
+  } @else if $varient == single-anchor-varient {
+    button {
+      @include button;
+      @include hyper-link-button;
+    }
+  }
+} ;

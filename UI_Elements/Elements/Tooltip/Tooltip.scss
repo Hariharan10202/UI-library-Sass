@@ -1,0 +1,26 @@
+@use "../../../Base/Typography/typography.scss" as *;
+@use "../../../Base/Alignment_mixin/alignment.scss" as *;
+@use "../../../Base/Iconography/iconography.scss" as *;
+@use "../../../Base/Colors/color.scss" as *;
+@use "../../../Base/Spacing/spacing.scss" as *;
+@use "../../../Base/Misc/Misc.scss" as *;
+@use "../../../Base//Borders/borderproperty.scss" as *;
+@use "../Dropdown/Dropdown_anatomy.scss" as *;
+
+@mixin tooltip() {
+  position: relative;
+
+  div {
+    background-color: $black;
+    padding: $p-10;
+    width: $width-fit;
+    border-radius: $radius;
+    position: absolute;
+    left: 30%;
+    @include display-flex(flex-start, flex-start, 5px, column);
+    span {
+      color: $white;
+      font-size: $font-m;
+    }
+  }
+}

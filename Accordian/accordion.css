@@ -1,0 +1,58 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: lato;
+}
+
+div[class$=Accordion] {
+  margin: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+div[class$=Accordion] div:nth-child(1) {
+  background-color: #fff;
+  border-bottom: 1px solid #afafaf;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0;
+  cursor: pointer;
+  padding: 10px;
+}
+div[class$=Accordion] div:nth-child(1) span {
+  font-size: 16px;
+  font-weight: 600;
+}
+div[class$=Accordion] div:nth-child(1) small {
+  background: url(https://www.linkpicture.com/q/sprites-medium.svg);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: -32px 0;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%) hue-rotate(325deg) brightness(89%) contrast(105%);
+}
+div[class$=Accordion] div:nth-child(1):hover {
+  background-color: #f1f1f1;
+}
+div[class$=Accordion] div:nth-child(2) {
+  max-height: 0;
+  transition: max-height 0.1s linear;
+  overflow: hidden;
+}
+div[class$=Accordion] div:nth-child(2) p {
+  line-height: 20px;
+}
+div[class$=Accordion] div[class*=showAccord] {
+  max-height: 200px;
+}/*# sourceMappingURL=accordion.css.map */

@@ -1,0 +1,13 @@
+@use "./Dropdown_anatomy.scss" as *;
+@use "../../../Base/Misc/Misc.scss" as *;
+
+* {
+  @include begin;
+}
+
+.container {
+  margin: 20px;
+  div[class$="lists"] {
+    @include dropdown-lists;
+  }
+}

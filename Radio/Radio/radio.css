@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: lato;
+}
+
+body {
+  padding: 20px;
+}
+
+.radio {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 20px;
+}
+.radio div {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+}
+.radio div input {
+  pointer-events: none;
+  width: 20px;
+  height: 20px;
+}
+.radio div span {
+  pointer-events: none;
+  font-size: 13px;
+}
+
+.radio-disabled {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 20px;
+}
+.radio-disabled div {
+  cursor: pointer;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+}
+.radio-disabled div input {
+  width: 20px;
+  height: 20px;
+  accent-color: #888888;
+}
+.radio-disabled div span {
+  font-size: 13px;
+  color: #888888;
+}/*# sourceMappingURL=radio.css.map */

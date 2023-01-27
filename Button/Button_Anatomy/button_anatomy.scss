@@ -1,0 +1,79 @@
+@use "../../Base/Spacing/spacing.scss";
+@use "../../Base/Borders/borderproperty.scss";
+@use "../../Base/Colors/color.scss";
+@use "../../Base/Typography/typography.scss";
+@use "../../Base/Misc/Misc.scss";
+@use "../../Base/Alignment_mixin/alignment.scss" as *;
+
+@mixin button {
+  @include display-flex(center, center, 10px);
+  padding: spacing.$p-btn;
+  border-radius: borderproperty.$radius;
+  cursor: Misc.$pointer;
+  height: Misc.$height;
+  font-weight: typography.$font-bold;
+  font-size: typography.$font-m;
+}
+
+@mixin primary-button {
+  background-color: color.$primaryBtn;
+  color: color.$black;
+  border: borderproperty.$border-none;
+}
+
+@mixin secondary-button {
+  background-color: color.$white;
+  color: color.$black;
+  border: borderproperty.$border;
+
+  &:hover {
+    background-color: color.$secondaryBtn;
+    color: color.$white;
+  }
+}
+
+@mixin tertiary-button {
+  background-color: color.$transparent;
+  color: color.$black;
+  border: borderproperty.$border-none;
+
+  &:hover {
+    background-color: color.$tertiaryBtn;
+  }
+}
+
+@mixin hyper-button {
+  background-color: color.$transparent;
+  color: color.$hyperBtn;
+  border: borderproperty.$hyper-border;
+
+  &:hover {
+    color: color.$hyperBtnHovered;
+  }
+}
+
+@mixin hyper-link-button {
+  background-color: color.$transparent;
+  color: color.$hyperBtn;
+  border: borderproperty.$border-none;
+  &:hover {
+    color: color.$hyperBtnHovered;
+  }
+}
+
+@mixin negative-button {
+  background-color: color.$white;
+  color: color.$error;
+  border: borderproperty.$error-border;
+
+  &:hover {
+    background-color: color.$error;
+    color: color.$white;
+  }
+}
+
+@mixin disabled-button {
+  background-color: color.$disabled-backgroundColor;
+  color: color.$disabled-color;
+  border: borderproperty.$border-none;
+}

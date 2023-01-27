@@ -1,0 +1,22 @@
+@use "../UI_Elements/Elements/InputField/inputFIeld.scss" as *;
+@use "../Base/Misc/Misc.scss" as *;
+@use "../Base/Alignment_mixin/alignment.scss" as *;
+
+* {
+  @include begin;
+}
+
+.container {
+  padding: 20px;
+}
+
+.container {
+  @include display-flex(flex-start, center, 10px, column);
+  div[class="inp"] {
+    @include inputField;
+  }
+
+  div[class="inp-l"] {
+    @include inputField-Label;
+  }
+}

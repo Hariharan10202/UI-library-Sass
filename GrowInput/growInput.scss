@@ -1,0 +1,59 @@
+@use "../Base/Misc/Misc.scss" as *;
+@use "../UI_Elements/Elements/InputField/inputFIeld.scss" as *;
+@use "../UI_Elements/Elements/Dropdown/Dropdown_anatomy.scss" as *;
+@use "../Base/Typography/typography.scss" as *;
+
+@use "../UI_Elements/Elements/Chip/chip.scss" as *;
+
+* {
+  @include begin;
+}
+
+div[class$="growInput"] {
+  position: relative;
+  margin: 20px;
+
+  div[class="inp-l"] {
+    @include grow-inp;
+
+    div[class$="chipContent"] {
+      @include chipContent;
+    }
+
+    small[class$="showCloseAction"] {
+      @include showCloseAction;
+    }
+  }
+
+  div[class*="growInput-lists"] {
+    @include dropdown-lists(true);
+
+    li[class$="currentDisabledList"] {
+      @include currentDisabledList;
+    }
+
+    div[class$="li-head-wrap"] {
+      div {
+        @include list-heading;
+      }
+    }
+
+    div[class$="growInput-list"] {
+      div[class$="notFound"] {
+        @include NotFound(true);
+        padding-top: 15px;
+      }
+    }
+  }
+
+  div[class$="helper-text"] {
+    span {
+      font-size: $font-s;
+      position: absolute;
+    }
+  }
+
+  div[class*="showDropdown"] {
+    @include showDropdown;
+  }
+}

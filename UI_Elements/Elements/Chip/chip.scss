@@ -1,0 +1,41 @@
+@use "../../../Base/Typography/typography.scss" as *;
+@use "../../../Base/Alignment_mixin/alignment.scss" as *;
+@use "../../../Base/Iconography/iconography.scss" as *;
+@use "../../../Base/Colors/color.scss" as *;
+@use "../../../Base/Spacing/spacing.scss" as *;
+@use "../../../Base/Misc/Misc.scss" as *;
+@use "../../../Base//Borders/borderproperty.scss" as *;
+@use "../Dropdown/Dropdown_anatomy.scss" as *;
+
+@mixin chip($width) {
+  margin-top: 10px;
+  @if $width == true {
+    width: $width-400;
+  }
+  @include display-flex(center, flex-start, 10px, row);
+  flex-wrap: wrap;
+  div {
+    @include chipContent;
+  }
+}
+
+@mixin chipContent {
+  background-color: $white;
+  padding: $p-5;
+  width: $width-fit;
+  border-radius: 20px;
+  border: $chipBorder;
+  @include display-flex(center, center, 10px, row);
+  span {
+    color: $black;
+    font-size: $font-s;
+  }
+  small {
+    //     border-radius: $radius50p;
+    //   border: $chipBorder;
+    @include icon-small;
+    @include close-xsmall;
+    cursor: $pointer;
+    pointer-events: $abled-state;
+  }
+}

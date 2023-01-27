@@ -1,0 +1,56 @@
+$outline-none: none;
+$border-none: none;
+$height: 36px;
+$height-200: 200px;
+$list-height: 46px;
+$twoline-list-height: 56px;
+$pointer: pointer;
+$pointer-f: default;
+$disabled-state: none;
+$abled-state: all;
+$width-20: 20px;
+$width-50: 50px;
+$width-100: 100px;
+$width-200: 200px;
+$width-220: 220px;
+$width-150: 150px;
+$width-250: 250px;
+$width-400: 400px;
+$width-600: 600px;
+$width-75p: 75%;
+$width-fit: fit-content;
+$height-fit: fit-content;
+$height-auto: auto;
+$height-100: 100px;
+$height-200: 200px;
+$height-500: 500px;
+$box-shadow: 0 7px 8px -4px rgb(0 0 0 / 20%), 0 13px 19px 2px rgb(0 0 0 / 14%),
+  0 5px 24px 4px rgb(0 0 0 / 12%);
+
+$display-none: none;
+$display-block: block;
+$overflow-hidden: hidden;
+$overflow-scroll: scroll;
+
+$opacity-0: 0;
+$opacity-1: 1;
+$transistion: 0.1s ease-in;
+
+$selectLists-height: 300px;
+
+$scale-0: scale3d(0);
+$scale-1: scale3d(100%);
+
+$por: relative;
+$poa: absolute;
+
+$z-99: 99;
+$z-999: 999;
+$width-100p: 100%;
+
+@mixin begin() {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: lato;
+}

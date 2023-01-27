@@ -1,0 +1,50 @@
+@use "../Base/Misc/Misc.scss" as *;
+@use "../UI_Elements/Elements/InputField/inputFIeld.scss" as *;
+@use "../UI_Elements/Elements/Dropdown/Dropdown_anatomy.scss" as *;
+@use "../Base/Typography/typography.scss" as *;
+
+* {
+  @include begin;
+}
+
+div[class$="twoline-autopop"] {
+  position: relative;
+  margin: 20px;
+
+  div[class="inp-l"] {
+    @include twoline-autopop-inp;
+
+    small[class$="showCloseAction"] {
+      @include showCloseAction;
+    }
+  }
+
+  div[class*="twoline-autopop-lists"] {
+    @include two-line-dropdown();
+
+    li[class$="currentSelectedList"] {
+      @include currentSelectedList;
+    }
+
+    div[class$="li-head-wrap"] {
+      div {
+        @include list-heading;
+      }
+    }
+
+    div[class$="twoline-autopop-list"] {
+      div[class$="notFound"] {
+        @include NotFound(true);
+        padding-top: 15px;
+      }
+    }
+  }
+
+  div[class$="helper-text"] {
+    @include helper-text;
+  }
+
+  div[class*="showDropdown"] {
+    @include showDropdown;
+  }
+}

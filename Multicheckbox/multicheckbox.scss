@@ -1,0 +1,133 @@
+@use "../Base/Misc/Misc.scss" as *;
+@use "../UI_Elements/Elements/InputField/inputFIeld.scss" as *;
+@use "../UI_Elements/Elements/Dropdown/Dropdown_anatomy.scss" as *;
+@use "../Checkbox/Checkbox_anatomy/Checkbox_anatomy.scss" as *;
+@use "../Button/Button_Anatomy/button_anatomy.scss" as *;
+@use "../UI_Elements/Elements/Tooltip/Tooltip.scss" as *;
+@use "../Base/Alignment_mixin/alignment.scss" as *;
+@use "../Base/Spacing/spacing.scss" as *;
+@use "../Base/Typography/typography.scss" as *;
+
+* {
+  @include begin;
+}
+
+div[class$="multiSelect-label"] {
+  margin: 20px;
+  width: $width-fit;
+  position: relative;
+
+  div[class$="multiSelect"] {
+    div[class*="tooltip"] {
+      @include tooltip;
+    }
+    div[class$="showTooltip"] {
+      @include showTooltip;
+    }
+    div[class$="hideTooltip"] {
+      @include hideTooltip;
+    }
+
+    div[class$="helper-text"] {
+      @include helper-text;
+    }
+  }
+
+  div[class="inp-l"] {
+    @include inputField-Label;
+  }
+  div[class*="multiSelect-lists"] {
+    @include dropdown-lists(true);
+    div[class$="inn-inp-wrap"] {
+      @include inner-input;
+    }
+
+    div[class$="li-head-wrap"] {
+      div:first-child {
+        @include list-heading;
+      }
+    }
+
+    li[class$="currentSelectedList"] {
+      @include currentSelectedList;
+    }
+
+    div[class$="multiSelect-list"] {
+      div[class$="notFound"] {
+        @include NotFound(false);
+      }
+      li {
+        div {
+          input[type="checkbox"] {
+            @include checkbox;
+          }
+        }
+      }
+    }
+
+    button {
+      @include button;
+      @include primary-button;
+      width: $width-100p;
+    }
+  }
+
+  div[class*="showDropdown"] {
+    @include showDropdown;
+  }
+}
+
+div[class$="multiSelect-label-icon"] {
+  margin: 20px;
+  width: $width-fit;
+  position: relative;
+
+  div[class$="multiSelect"] {
+    div:nth-child(3) {
+      @include tooltip;
+    }
+  }
+
+  div[class="inp-l"] {
+    @include inputField-Label;
+  }
+  div[class*="multiSelect-lists"] {
+    @include dropdown-lists(true);
+    div[class$="inn-inp-wrap"] {
+      @include inner-input;
+    }
+
+    div[class$="li-head-wrap"] {
+      div:first-child {
+        @include list-heading;
+      }
+    }
+
+    li[class$="currentSelectedList"] {
+      @include currentSelectedList;
+    }
+
+    div[class$="multiSelect-list"] {
+      div[class$="notFound"] {
+        @include NotFound(false);
+      }
+      li {
+        div {
+          input[type="checkbox"] {
+            @include checkbox;
+          }
+        }
+      }
+    }
+
+    button {
+      @include button;
+      @include primary-button;
+      width: $width-100p;
+    }
+  }
+
+  div[class*="showDropdown"] {
+    @include showDropdown;
+  }
+}

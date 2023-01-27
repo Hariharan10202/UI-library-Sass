@@ -1,0 +1,915 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: lato;
+}
+
+div[class$=container] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0;
+}
+
+div[class=m-btn-g] {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+div[class=m-btn-g] div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+}
+div[class=m-btn-g] div:nth-child(1) button:nth-child(3),
+div[class=m-btn-g] div:nth-child(1) button:nth-child(2),
+div[class=m-btn-g] div:nth-child(1) button:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 36px;
+  font-weight: 600;
+  font-size: 13px;
+}
+div[class=m-btn-g] div:nth-child(1) button {
+  display: none;
+}
+div[class=m-btn-g] div:nth-child(1) button:nth-child(3) {
+  background-color: #ffa000;
+  color: #333;
+  border: none;
+}
+div[class=m-btn-g] div:nth-child(1) button:nth-child(2) {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #233669;
+}
+div[class=m-btn-g] div:nth-child(1) button:nth-child(2):hover {
+  background-color: #233669;
+  color: #fff;
+}
+div[class=m-btn-g] div:nth-child(1) button:nth-child(1) {
+  background-color: transparent;
+  color: #333;
+  border: none;
+}
+div[class=m-btn-g] div:nth-child(1) button:nth-child(1):hover {
+  background-color: #f1f1f1;
+}
+div[class=m-btn-g] div:nth-child(2) button,
+div[class=m-btn-g] div:nth-child(3) button {
+  display: none;
+}
+div[class=m-btn-g] div:nth-child(2) button:nth-child(3),
+div[class=m-btn-g] div:nth-child(2) button:nth-child(2),
+div[class=m-btn-g] div:nth-child(2) button:nth-child(1),
+div[class=m-btn-g] div:nth-child(3) button:nth-child(3),
+div[class=m-btn-g] div:nth-child(3) button:nth-child(2),
+div[class=m-btn-g] div:nth-child(3) button:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 36px;
+  font-weight: 600;
+  font-size: 13px;
+}
+div[class=m-btn-g] div:nth-child(2) button:nth-child(3),
+div[class=m-btn-g] div:nth-child(3) button:nth-child(3) {
+  background-color: #ffa000;
+  color: #333;
+  border: none;
+}
+div[class=m-btn-g] div:nth-child(2) button:nth-child(3) small,
+div[class=m-btn-g] div:nth-child(3) button:nth-child(3) small {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: -24px 0;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%) hue-rotate(325deg) brightness(89%) contrast(105%);
+}
+div[class=m-btn-g] div:nth-child(2) button:nth-child(2),
+div[class=m-btn-g] div:nth-child(3) button:nth-child(2) {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #233669;
+}
+div[class=m-btn-g] div:nth-child(2) button:nth-child(2):hover,
+div[class=m-btn-g] div:nth-child(3) button:nth-child(2):hover {
+  background-color: #233669;
+  color: #fff;
+}
+div[class=m-btn-g] div:nth-child(2) button:nth-child(2) small,
+div[class=m-btn-g] div:nth-child(3) button:nth-child(2) small {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: -24px 0;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%) hue-rotate(325deg) brightness(89%) contrast(105%);
+}
+div[class=m-btn-g] div:nth-child(2) button:nth-child(2):hover small,
+div[class=m-btn-g] div:nth-child(3) button:nth-child(2):hover small {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(5%) saturate(506%) hue-rotate(233deg) brightness(114%) contrast(100%);
+}
+div[class=m-btn-g] div:nth-child(2) button:nth-child(1),
+div[class=m-btn-g] div:nth-child(3) button:nth-child(1) {
+  background-color: transparent;
+  color: #333;
+  border: none;
+}
+div[class=m-btn-g] div:nth-child(2) button:nth-child(1):hover,
+div[class=m-btn-g] div:nth-child(3) button:nth-child(1):hover {
+  background-color: #f1f1f1;
+}
+div[class=m-btn-g] div:nth-child(2) button:nth-child(1) small,
+div[class=m-btn-g] div:nth-child(3) button:nth-child(1) small {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: -24px 0;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%) hue-rotate(325deg) brightness(89%) contrast(105%);
+}
+div[class=m-btn-g] div:nth-child(4) button {
+  display: none;
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(3),
+div[class=m-btn-g] div:nth-child(4) button:nth-child(2),
+div[class=m-btn-g] div:nth-child(4) button:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 36px;
+  font-weight: 600;
+  font-size: 13px;
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(3) {
+  background-color: #ffa000;
+  color: #333;
+  border: none;
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(3) div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(3) small:first-child {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: -24px 0;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%) hue-rotate(325deg) brightness(89%) contrast(105%);
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(3) small:last-child {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(2) {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #233669;
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(2) div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(2):hover {
+  background-color: #233669;
+  color: #fff;
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(2) small:first-child {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: -24px 0;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%) hue-rotate(325deg) brightness(89%) contrast(105%);
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(2) small:last-child {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(2):hover small {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(5%) saturate(506%) hue-rotate(233deg) brightness(114%) contrast(100%);
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(1) {
+  background-color: transparent;
+  color: #333;
+  border: none;
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(1) div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(1):hover {
+  background-color: #f1f1f1;
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(1) small:first-child {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: -24px 0;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%) hue-rotate(325deg) brightness(89%) contrast(105%);
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(1) small:last-child {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(4) {
+  background-color: transparent;
+  color: #42a5f5;
+  border: 1px solid #42a5f5;
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(4) div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(4):hover {
+  color: #2285d0;
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(4) small:first-child {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: -24px 0;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%) hue-rotate(325deg) brightness(89%) contrast(105%);
+  filter: brightness(0) saturate(100%) invert(58%) sepia(26%) saturate(1250%) hue-rotate(168deg) brightness(98%) contrast(96%);
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(4) small:last-child {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  filter: brightness(0) saturate(100%) invert(58%) sepia(26%) saturate(1250%) hue-rotate(168deg) brightness(98%) contrast(96%);
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(5) {
+  background-color: #fff;
+  color: rgb(255, 0, 0);
+  border: 1px solid rgb(255, 0, 0);
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(5) div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(5):hover {
+  background-color: rgb(255, 0, 0);
+  color: #fff;
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(5) small:first-child {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: -24px 0;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%) hue-rotate(325deg) brightness(89%) contrast(105%);
+  filter: brightness(0) saturate(100%) invert(99%) sepia(5%) saturate(506%) hue-rotate(233deg) brightness(114%) contrast(100%);
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(5) small:last-child {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  filter: brightness(0) saturate(100%) invert(99%) sepia(5%) saturate(506%) hue-rotate(233deg) brightness(114%) contrast(100%);
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(6) {
+  background-color: #cccccc;
+  color: #888888;
+  border: none;
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(6) div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(6) small:first-child {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: -24px 0;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%) hue-rotate(325deg) brightness(89%) contrast(105%);
+  filter: brightness(0) saturate(100%) invert(53%) sepia(11%) saturate(0%) hue-rotate(233deg) brightness(99%) contrast(85%);
+}
+div[class=m-btn-g] div:nth-child(4) button:nth-child(6) small:last-child {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  filter: brightness(0) saturate(100%) invert(53%) sepia(11%) saturate(0%) hue-rotate(233deg) brightness(99%) contrast(85%);
+}
+
+.s-btn-g {
+  margin-top: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.s-btn-g div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 20px;
+}
+.s-btn-g button:nth-child(3),
+.s-btn-g button:nth-child(2),
+.s-btn-g button:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 36px;
+  font-weight: 600;
+  font-size: 13px;
+}
+.s-btn-g button {
+  display: none;
+}
+.s-btn-g div:nth-child(1) button,
+.s-btn-g div:nth-child(2) button,
+.s-btn-g div:nth-child(3) button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 36px;
+  font-weight: 600;
+  font-size: 13px;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #233669;
+}
+.s-btn-g div:nth-child(1) button:hover,
+.s-btn-g div:nth-child(2) button:hover,
+.s-btn-g div:nth-child(3) button:hover {
+  background-color: #233669;
+  color: #fff;
+}
+.s-btn-g div:nth-child(1) button small,
+.s-btn-g div:nth-child(2) button small,
+.s-btn-g div:nth-child(3) button small {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: -24px 0;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%) hue-rotate(325deg) brightness(89%) contrast(105%);
+}
+.s-btn-g div:nth-child(1) button:hover small,
+.s-btn-g div:nth-child(2) button:hover small,
+.s-btn-g div:nth-child(3) button:hover small {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(5%) saturate(506%) hue-rotate(233deg) brightness(114%) contrast(100%);
+}
+.s-btn-g div:nth-child(4) button {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #233669;
+}
+.s-btn-g div:nth-child(4) button div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+}
+.s-btn-g div:nth-child(4) button:hover {
+  background-color: #233669;
+  color: #fff;
+}
+.s-btn-g div:nth-child(4) button small:first-child {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: -24px 0;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%) hue-rotate(325deg) brightness(89%) contrast(105%);
+}
+.s-btn-g div:nth-child(4) button small:last-child {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+}
+.s-btn-g div:nth-child(4) button:hover small {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(5%) saturate(506%) hue-rotate(233deg) brightness(114%) contrast(100%);
+}
+
+div[class$=m-d-btn-g] {
+  margin-top: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+div[class$=m-d-btn-g] div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+}
+div[class$=m-d-btn-g] div:nth-child(1) button:nth-child(3),
+div[class$=m-d-btn-g] div:nth-child(1) button:nth-child(2),
+div[class$=m-d-btn-g] div:nth-child(1) button:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 36px;
+  font-weight: 600;
+  font-size: 13px;
+}
+div[class$=m-d-btn-g] div:nth-child(1) button {
+  display: none;
+}
+div[class$=m-d-btn-g] div:nth-child(1) button:nth-child(3) {
+  background-color: #ffa000;
+  color: #333;
+  border: none;
+}
+div[class$=m-d-btn-g] div:nth-child(1) button:nth-child(2) {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #233669;
+}
+div[class$=m-d-btn-g] div:nth-child(1) button:nth-child(2):hover {
+  background-color: #233669;
+  color: #fff;
+}
+div[class$=m-d-btn-g] div:nth-child(1) button:nth-child(1) {
+  background-color: #fff;
+  color: rgb(255, 0, 0);
+  border: 1px solid rgb(255, 0, 0);
+}
+div[class$=m-d-btn-g] div:nth-child(1) button:nth-child(1):hover {
+  background-color: rgb(255, 0, 0);
+  color: #fff;
+}
+div[class$=m-d-btn-g] div:nth-child(2) button:nth-child(3),
+div[class$=m-d-btn-g] div:nth-child(2) button:nth-child(2),
+div[class$=m-d-btn-g] div:nth-child(2) button:nth-child(1),
+div[class$=m-d-btn-g] div:nth-child(3) button:nth-child(3),
+div[class$=m-d-btn-g] div:nth-child(3) button:nth-child(2),
+div[class$=m-d-btn-g] div:nth-child(3) button:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 36px;
+  font-weight: 600;
+  font-size: 13px;
+}
+div[class$=m-d-btn-g] div:nth-child(2) button,
+div[class$=m-d-btn-g] div:nth-child(3) button {
+  display: none;
+}
+div[class$=m-d-btn-g] div:nth-child(2) button:nth-child(3),
+div[class$=m-d-btn-g] div:nth-child(3) button:nth-child(3) {
+  background-color: #ffa000;
+  color: #333;
+  border: none;
+}
+div[class$=m-d-btn-g] div:nth-child(2) button:nth-child(3) small,
+div[class$=m-d-btn-g] div:nth-child(3) button:nth-child(3) small {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: -24px 0;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%) hue-rotate(325deg) brightness(89%) contrast(105%);
+}
+div[class$=m-d-btn-g] div:nth-child(2) button:nth-child(2),
+div[class$=m-d-btn-g] div:nth-child(3) button:nth-child(2) {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #233669;
+}
+div[class$=m-d-btn-g] div:nth-child(2) button:nth-child(2):hover,
+div[class$=m-d-btn-g] div:nth-child(3) button:nth-child(2):hover {
+  background-color: #233669;
+  color: #fff;
+}
+div[class$=m-d-btn-g] div:nth-child(2) button:nth-child(2) small,
+div[class$=m-d-btn-g] div:nth-child(3) button:nth-child(2) small {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: -24px 0;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%) hue-rotate(325deg) brightness(89%) contrast(105%);
+}
+div[class$=m-d-btn-g] div:nth-child(2) button:nth-child(2):hover small,
+div[class$=m-d-btn-g] div:nth-child(3) button:nth-child(2):hover small {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(5%) saturate(506%) hue-rotate(233deg) brightness(114%) contrast(100%);
+}
+div[class$=m-d-btn-g] div:nth-child(2) button:nth-child(1),
+div[class$=m-d-btn-g] div:nth-child(3) button:nth-child(1) {
+  background-color: #fff;
+  color: rgb(255, 0, 0);
+  border: 1px solid rgb(255, 0, 0);
+}
+div[class$=m-d-btn-g] div:nth-child(2) button:nth-child(1):hover,
+div[class$=m-d-btn-g] div:nth-child(3) button:nth-child(1):hover {
+  background-color: rgb(255, 0, 0);
+  color: #fff;
+}
+div[class$=m-d-btn-g] div:nth-child(2) button:nth-child(1) small,
+div[class$=m-d-btn-g] div:nth-child(3) button:nth-child(1) small {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  filter: brightness(0) saturate(100%) invert(14%) sepia(92%) saturate(7474%) hue-rotate(356deg) brightness(117%) contrast(120%);
+}
+div[class$=m-d-btn-g] div:nth-child(2) button:nth-child(1):hover small,
+div[class$=m-d-btn-g] div:nth-child(3) button:nth-child(1):hover small {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(5%) saturate(506%) hue-rotate(233deg) brightness(114%) contrast(100%);
+}
+div[class$=m-d-btn-g] div:nth-child(4) button:nth-child(3),
+div[class$=m-d-btn-g] div:nth-child(4) button:nth-child(2),
+div[class$=m-d-btn-g] div:nth-child(4) button:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 36px;
+  font-weight: 600;
+  font-size: 13px;
+}
+div[class$=m-d-btn-g] div:nth-child(4) button {
+  display: none;
+}
+div[class$=m-d-btn-g] div:nth-child(4) button:nth-child(3) {
+  background-color: #ffa000;
+  color: #333;
+  border: none;
+}
+div[class$=m-d-btn-g] div:nth-child(4) button:nth-child(3) div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+}
+div[class$=m-d-btn-g] div:nth-child(4) button:nth-child(3) small:first-child {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: -24px 0;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%) hue-rotate(325deg) brightness(89%) contrast(105%);
+}
+div[class$=m-d-btn-g] div:nth-child(4) button:nth-child(3) small:last-child {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: 0px 0;
+  filter: brightness(0) saturate(100%) invert(85%) sepia(0%) saturate(0%) hue-rotate(209deg) brightness(84%) contrast(86%);
+}
+div[class$=m-d-btn-g] div:nth-child(4) button:nth-child(2) {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #233669;
+}
+div[class$=m-d-btn-g] div:nth-child(4) button:nth-child(2) div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+}
+div[class$=m-d-btn-g] div:nth-child(4) button:nth-child(2):hover {
+  background-color: #233669;
+  color: #fff;
+}
+div[class$=m-d-btn-g] div:nth-child(4) button:nth-child(2) small:first-child {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: -24px 0;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%) hue-rotate(325deg) brightness(89%) contrast(105%);
+}
+div[class$=m-d-btn-g] div:nth-child(4) button:nth-child(2) small:last-child {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: 0px 0;
+  filter: brightness(0) saturate(100%) invert(85%) sepia(0%) saturate(0%) hue-rotate(209deg) brightness(84%) contrast(86%);
+}
+div[class$=m-d-btn-g] div:nth-child(4) button:nth-child(2):hover small {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(5%) saturate(506%) hue-rotate(233deg) brightness(114%) contrast(100%);
+}
+div[class$=m-d-btn-g] div:nth-child(4) button:nth-child(1) {
+  background-color: transparent;
+  color: #333;
+  border: none;
+}
+div[class$=m-d-btn-g] div:nth-child(4) button:nth-child(1) div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+}
+div[class$=m-d-btn-g] div:nth-child(4) button:nth-child(1):hover {
+  background-color: #f1f1f1;
+}
+div[class$=m-d-btn-g] div:nth-child(4) button:nth-child(1) small:first-child {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: -24px 0;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%) hue-rotate(325deg) brightness(89%) contrast(105%);
+}
+div[class$=m-d-btn-g] div:nth-child(4) button:nth-child(1) small:last-child {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: 0px 0;
+  filter: brightness(0) saturate(100%) invert(85%) sepia(0%) saturate(0%) hue-rotate(209deg) brightness(84%) contrast(86%);
+}
+
+div[class$=hl-btn-g] {
+  margin-top: 20px;
+}
+div[class$=hl-btn-g] div {
+  display: none;
+}
+div[class$=hl-btn-g] div:nth-child(1),
+div[class$=hl-btn-g] div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 20px;
+}
+div[class$=hl-btn-g] div:nth-child(1) button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 36px;
+  font-weight: 600;
+  font-size: 13px;
+  background-color: transparent;
+  color: #42a5f5;
+  border: none;
+}
+div[class$=hl-btn-g] div:nth-child(1) button:hover {
+  color: #2285d0;
+}
+div[class$=hl-btn-g] div:nth-child(2) button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 36px;
+  font-weight: 600;
+  font-size: 13px;
+  background-color: transparent;
+  color: #42a5f5;
+  border: none;
+}
+div[class$=hl-btn-g] div:nth-child(2) button:hover {
+  color: #2285d0;
+}
+div[class$=hl-btn-g] div:nth-child(2) button small {
+  background: url(https://raw.githubusercontent.com/hariharanfreightify/Css-sprits/327feaca585c257d72d26ee045899d0b381d24a9/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: -24px 0;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%) hue-rotate(325deg) brightness(89%) contrast(105%);
+  filter: brightness(0) saturate(100%) invert(58%) sepia(26%) saturate(1250%) hue-rotate(168deg) brightness(98%) contrast(96%);
+}
+div[class$=hl-btn-g] div:nth-child(2) button span + small {
+  display: none;
+}
+div[class$=hl-btn-g] div:nth-child(2) button:hover small {
+  filter: brightness(0) saturate(100%) invert(35%) sepia(77%) saturate(1198%) hue-rotate(180deg) brightness(100%) contrast(80%);
+}/*# sourceMappingURL=styles.css.map */

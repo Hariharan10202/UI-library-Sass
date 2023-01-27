@@ -1,0 +1,90 @@
+@use "../Base/Misc/Misc.scss" as *;
+@use "../UI_Elements/Elements/InputField/inputFIeld.scss" as *;
+@use "../UI_Elements/Elements/Dropdown/Dropdown_anatomy.scss" as *;
+@use "../Checkbox/Checkbox_anatomy/Checkbox_anatomy.scss" as *;
+@use "../Button/Button_Anatomy/button_anatomy.scss" as *;
+@use "../UI_Elements/Elements/Tooltip/Tooltip.scss" as *;
+@use "../Base/Alignment_mixin/alignment.scss" as *;
+@use "../Base/Spacing/spacing.scss" as *;
+@use "../Base/Typography/typography.scss" as *;
+@use "../Base/Colors/color.scss" as *;
+@use "../UI_Elements/Elements/Chip/chip.scss" as *;
+@use "../Base/Iconography/iconography.scss" as *;
+
+* {
+  @include begin;
+}
+
+div[class$="twoline-multiSelect-label-icon"] {
+  margin: 20px;
+  width: $width-fit;
+  position: relative;
+
+  @include display-flex(flex-start, center, 10px, row);
+
+  div {
+    small {
+      @include icon-large;
+      @include userprofile;
+    }
+  }
+
+  div[class$="twoline-multiSelect"] {
+    div[class*="chip"] {
+      @include chip(true);
+    }
+
+    div[class$="helper-text"] {
+      span {
+        font-size: $font-s;
+      }
+    }
+  }
+
+  div[class="inp-l"] {
+    @include inputField-Label;
+  }
+  div[class*="twoline-multiSelect-lists"] {
+    @include two-line-dropdown;
+    div[class$="inn-inp-wrap"] {
+      @include inner-input;
+    }
+
+    div[class$="li-head-wrap"] {
+      div:first-child {
+        @include list-heading;
+      }
+    }
+
+    li[class$="currentSelectedList"] {
+      @include currentSelectedList;
+    }
+
+    div[class$="twoline-multiSelect-list"] {
+      div[class$="list-selected"] {
+        background-color: $list-selected !important;
+      }
+
+      div[class$="notFound"] {
+        @include NotFound(false);
+      }
+      li {
+        div {
+          input[type="checkbox"] {
+            @include checkbox;
+          }
+        }
+      }
+    }
+
+    button {
+      @include button;
+      @include primary-button;
+      width: $width-100p;
+    }
+  }
+
+  div[class*="showDropdown"] {
+    @include showDropdown;
+  }
+}

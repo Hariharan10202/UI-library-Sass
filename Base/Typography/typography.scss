@@ -1,0 +1,16 @@
+$font-s: 11px;
+$font-xs: 9px;
+$font-m: 13px;
+$font-xm: 16px;
+$font-l: 21px;
+$font-xl: 23px;
+$font-regular: normal;
+$font-bold: 600;
+$font-italic: italic;
+$font-family: lato;
+
+@mixin text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

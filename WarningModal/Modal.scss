@@ -1,0 +1,36 @@
+@use "../UI_Elements/Elements/Accordion/accordion_anatomy.scss" as *;
+@use "../Base/Misc/Misc.scss" as *;
+@use "../Button/Button_Anatomy/button_anatomy.scss" as *;
+@use "../UI_Elements/Elements/Modal/modal_anatomy.scss" as *;
+@use "../Base/Misc/Misc.scss" as *;
+
+* {
+  @include begin;
+}
+
+div[class$="conf-Modal"] {
+  margin: 20px;
+  div {
+    button {
+      @include button;
+      @include primary-button;
+    }
+  }
+
+  div[class*="Modal-content"] {
+    width: $width-400;
+    @include conf-modal;
+  }
+
+  div[class*="hideBackdrop"] {
+    @include hideBackdrop;
+  }
+
+  div[class*="backdrop"] {
+    @include backdrop;
+  }
+
+  div[class*="showBackdrop"] {
+    @include showBackdrop;
+  }
+}

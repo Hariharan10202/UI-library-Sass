@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./radio.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="radio">
+      <div onclick="radioHandler(event)">
+        <input type="radio" /><span>Radio</span>
+      </div>
+      <div onclick="radioHandler(event)">
+        <input type="radio" checked /><span>Radio</span>
+      </div>
+    </div>
+    <div class="radio-disabled">
+      <div onclick="radioHandler(event)">
+        <input type="radio" /><span>Radio</span>
+      </div>
+      <div onclick="radioHandler(event)">
+        <input type="radio" checked /><span>Radio</span>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

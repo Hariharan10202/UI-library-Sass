@@ -1,0 +1,11 @@
+@use "../Colors/color.scss";
+
+$radius: 4px;
+$border-none: none;
+$border: 1px solid color.$secondaryBtn;
+$input-border: 1px solid color.$input-border-cl;
+$hyper-border: 1px solid color.$hyperBtn;
+$error-border: 1px solid color.$error;
+$focus-border: 1px solid color.$border-focus;
+$radius50p: 50%;
+$chipBorder: 1px solid color.$black;
