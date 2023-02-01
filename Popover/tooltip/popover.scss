@@ -1,0 +1,24 @@
+@use "../../Base/Alignment_mixin/alignment.scss" as *;
+
+@use "../../Base/Misc/Misc.scss" as *;
+@use "../../Base/Typography/typography.scss" as *;
+@use "../../Base/Colors/color.scss";
+@use "../../UI_Elements/Elements/Tooltip/Tooltip.scss" as *;
+@use "../../UI_Elements/Elements/Dropdown/Dropdown_anatomy.scss" as *;
+
+* {
+  @include begin;
+}
+
+div[class$="ui-tooltip"] {
+  & > div:first-child > * {
+    font-size: $font-xm;
+  }
+  & > div:first-child:hover + div[class$="tooltip"] {
+    @include showTooltip;
+  }
+  & > div[class$="tooltip"] {
+    @include tootlip_anatomy;
+    @include hideTooltip;
+  }
+}

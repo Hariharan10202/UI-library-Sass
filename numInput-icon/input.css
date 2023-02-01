@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: lato;
+}
+
+.container {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 20px;
+}
+
+div[class$=ui-num-input-icon] {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 5px;
+}
+div[class$=ui-num-input-icon] > div:first-child small {
+  background: url(https://www.linkpicture.com/q/sprites-large.svg);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: 0px 0;
+  filter: brightness(0) saturate(100%) invert(85%) sepia(0%) saturate(0%) hue-rotate(209deg) brightness(84%) contrast(86%);
+}
+div[class$=ui-num-input-icon] div[class=inp-l] {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+div[class$=ui-num-input-icon] div[class=inp-l] div:nth-child(1) {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+}
+div[class$=ui-num-input-icon] div[class=inp-l] div:nth-child(1) small {
+  background: url(https://www.linkpicture.com/q/sprites-medium.svg);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+}
+div[class$=ui-num-input-icon] div[class=inp-l] div:nth-child(1) label {
+  font-size: 16px;
+}
+div[class$=ui-num-input-icon] div[class=inp-l] div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #afafaf;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 4px;
+  height: 36px;
+  cursor: pointer;
+}
+div[class$=ui-num-input-icon] div[class=inp-l] div:nth-child(2) input {
+  border: none;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  outline: none;
+}
+div[class$=ui-num-input-icon] div[class=inp-l] div:nth-child(2) input::-moz-placeholder {
+  font-style: italic;
+}
+div[class$=ui-num-input-icon] div[class=inp-l] div:nth-child(2) input:-ms-input-placeholder {
+  font-style: italic;
+}
+div[class$=ui-num-input-icon] div[class=inp-l] div:nth-child(2) input::placeholder {
+  font-style: italic;
+}
+div[class$=ui-num-input-icon] div[class=inp-l] div:nth-child(2):focus-within {
+  border: 1px solid #42a5f5;
+}
+div[class$=ui-num-input-icon] div[class=inp-l] div:nth-child(2) small:first-child {
+  background: url(https://www.linkpicture.com/q/sprites-medium.svg);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: 0px -128px;
+  filter: brightness(0) saturate(100%) invert(85%) sepia(0%) saturate(0%) hue-rotate(209deg) brightness(84%) contrast(86%);
+  pointer-events: none;
+}
+div[class$=ui-num-input-icon] div[class=inp-l] div:nth-child(2) small:last-child {
+  background: url(https://www.linkpicture.com/q/sprites-medium.svg);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: 0px -128px;
+  filter: brightness(0) saturate(100%) invert(85%) sepia(0%) saturate(0%) hue-rotate(209deg) brightness(84%) contrast(86%);
+}/*# sourceMappingURL=input.css.map */

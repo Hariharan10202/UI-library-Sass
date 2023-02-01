@@ -1,0 +1,31 @@
+@use "../../Base/Alignment_mixin/alignment.scss" as *;
+
+@use "../../Base/Misc/Misc.scss" as *;
+@use "../../Base/Typography/typography.scss" as *;
+@use "../../Base/Spacing/spacing.scss" as *;
+@use "../../Base/Colors/color.scss";
+@use "../../UI_Elements/Elements/Toggletip/toggletip.scss" as *;
+@use "../../UI_Elements/Elements/Dropdown/Dropdown_anatomy.scss" as *;
+@use "../../Base/Borders/borderproperty.scss" as *;
+
+* {
+  @include begin;
+}
+
+div[class$="ui-toggle-tip"] {
+  margin: 20px;
+  position: relative;
+  display: inline-block;
+
+  & > div:first-child > * {
+    font-size: $font-xm;
+    border: $input-border;
+    padding: $p-btn;
+    border-radius: $radius;
+  }
+  @include Toggle-tip;
+
+  div[class*="showToggletip"] {
+    @include showToggletip;
+  }
+}

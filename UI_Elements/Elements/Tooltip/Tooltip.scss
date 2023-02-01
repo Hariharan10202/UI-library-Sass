@@ -24,3 +24,13 @@
     }
   }
 }
+
+@mixin tootlip_anatomy {
+  z-index: $z-99;
+  background-color: $black;
+  padding: $p-10;
+  width: $width-fit;
+  border-radius: $radius;
+  color: $white;
+  font-size: $font-m;
+}

@@ -10,7 +10,12 @@ $font-italic: italic;
 $font-family: lato;
 
 @mixin text-overflow {
-  overflow: hidden;
+  // overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+@mixin bold-s {
+  font-size: $font-m;
+  font-weight: $font-bold;
 }

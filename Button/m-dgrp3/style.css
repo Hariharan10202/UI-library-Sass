@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: lato;
+}
+
+div[class$="container"] {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0;
+}
+
+div[class$="m-d-btn-g"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+}
+div[class$="m-d-btn-g"] button[class="pri-btn"],
+div[class$="m-d-btn-g"] button[class="sec-btn"],
+div[class$="m-d-btn-g"] button[class="neg-btn"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 36px;
+  font-weight: 600;
+  font-size: 13px;
+}
+div[class$="m-d-btn-g"] button {
+  display: none;
+}
+div[class$="m-d-btn-g"] button[class="pri-btn"] {
+  background-color: #ffa000;
+  color: #333;
+  border: none;
+}
+div[class$="m-d-btn-g"] button[class="pri-btn"] small {
+  background: url(https://www.linkpicture.com/q/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: -24px 0;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%)
+    hue-rotate(325deg) brightness(89%) contrast(105%);
+}
+div[class$="m-d-btn-g"] button[class="sec-btn"] {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #233669;
+}
+div[class$="m-d-btn-g"] button[class="sec-btn"]:hover {
+  background-color: #233669;
+  color: #fff;
+}
+div[class$="m-d-btn-g"] button[class="sec-btn"] small {
+  background: url(https://www.linkpicture.com/q/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: -24px 0;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%)
+    hue-rotate(325deg) brightness(89%) contrast(105%);
+}
+div[class$="m-d-btn-g"] button[class="sec-btn"]:hover small {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(5%) saturate(506%)
+    hue-rotate(233deg) brightness(114%) contrast(100%);
+}
+div[class$="m-d-btn-g"] button[class="neg-btn"] {
+  background-color: #fff;
+  color: #ff4248;
+  border: 1px solid #ff4248;
+}
+div[class$="m-d-btn-g"] button[class="neg-btn"]:hover {
+  background-color: #ff4248;
+  color: #fff;
+}
+div[class$="m-d-btn-g"] button[class="neg-btn"] small {
+  background: url(https://www.linkpicture.com/q/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  filter: brightness(0) saturate(100%) invert(54%) sepia(50%) saturate(5688%)
+    hue-rotate(328deg) brightness(99%) contrast(132%);
+}
+div[class$="m-d-btn-g"] button[class="neg-btn"]:hover small {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(5%) saturate(506%)
+    hue-rotate(233deg) brightness(114%) contrast(100%);
+} /*# sourceMappingURL=style.css.map */

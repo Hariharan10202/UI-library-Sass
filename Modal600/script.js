@@ -1,8 +1,14 @@
 modalProperty = {
-  modal: document.querySelector("Modal-400"),
-  modalAction: document.querySelector(".modalAction"),
-  closeModalAction1: document.querySelector(".closeModalAction1"),
-  closeModalAction2: document.querySelector(".closeModalAction2"),
+  modal: document.querySelector(".Modal-600"),
+  modalAction:
+    document.querySelector(".Modal-600").lastElementChild.previousElementSibling
+      .firstElementChild,
+  closeModalAction1:
+    document.querySelector(".Modal-600").lastElementChild.lastElementChild
+      .firstElementChild,
+  closeModalAction2:
+    document.querySelector(".Modal-600").lastElementChild.firstElementChild
+      .lastElementChild,
   body: document.querySelector("body"),
 };
 

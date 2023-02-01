@@ -1,0 +1,140 @@
+@use "../Base/Misc/Misc.scss" as *;
+@use "../UI_Elements/Elements/InputField/inputFIeld.scss" as *;
+@use "../UI_Elements/Elements/Dropdown/Dropdown_anatomy.scss" as *;
+@use "../Base/Typography/typography.scss" as *;
+@use "../Base/Alignment_mixin/alignment.scss" as *;
+@use "../Base/Spacing/spacing.scss" as *;
+@use "../Checkbox/Checkbox_anatomy/Checkbox_anatomy.scss" as *;
+@use "../Base/Borders/borderproperty.scss" as *;
+@use "../Button/Button_Anatomy/button_anatomy.scss" as *;
+
+@use "../UI_Elements/Elements/Tooltip/Tooltip.scss" as *;
+@use "../Base/Iconography/iconography.scss" as *;
+
+* {
+  @include begin;
+}
+
+div[class$="panel-dropdown-icon"] {
+  position: relative;
+  margin: 20px;
+  width: $width-fit;
+
+  @include display-flex(flex-start, flex-start, 10px, row);
+  & > div:first-child {
+    small {
+      @include icon-large;
+      @include userprofile;
+    }
+  }
+
+  div[class="inp-l"] {
+    @include inputField-Label;
+  }
+  div[class*="panel-dp"] {
+    @include dropdown-lists(true);
+
+    form {
+      div[class$="top"],
+      div[class$="middle"],
+      div[class$="bottom"] {
+        padding: $p-20;
+        border-bottom: $input-border;
+      }
+      // div[class$="top"] > div:nth-child(1),
+      // div[class$="middle"] > div:nth-child(1),
+      // div[class$="bottom"] > div:nth-child(1) {
+      //   @include display-flex(flex-start, flex-start, 0, column);
+      // }
+      div[class$="top"] {
+        @include display-flex(center, flex-start, 100px, row);
+
+        & > div {
+          @include display-flex(flex-start, flex-start, 10px, column);
+          & > :first-child {
+            span {
+              @include bold-s;
+            }
+          }
+          & > :last-child {
+            @include display-flex(flex-start, flex-start, 10px, column);
+            & > div {
+              @include display-flex(center, center, 10px, row);
+              input {
+                @include checkbox;
+              }
+            }
+            label {
+              font-size: $font-m;
+            }
+          }
+        }
+      }
+      div[class$="middle"] {
+        & > div {
+          @include display-flex(flex-start, flex-start, 10px, column);
+          span {
+            @include bold-s;
+          }
+          & > div {
+            @include display-flex(center, flex-start, 20px, row);
+            div {
+              @include display-flex(center, center, 5px, row);
+              input {
+                @include checkbox;
+              }
+              label {
+                font-size: $font-m;
+              }
+            }
+          }
+        }
+      }
+      div[class$="bottom"] {
+        & > div {
+          @include display-flex(flex-start, flex-start, 10px, column);
+          & > span {
+            @include bold-s;
+          }
+          & > div {
+            @include display-flex(center, flex-start, 20px, row);
+            div {
+              @include display-flex(flex-start, flex-start, 5px, column);
+              input {
+                height: $height;
+                padding: $p-10;
+              }
+              span {
+                font-size: $font-m;
+              }
+            }
+          }
+        }
+      }
+      & > :last-child {
+        padding: $p-20;
+        @include display-flex(center, flex-end, 0, row);
+        button {
+          @include button;
+          @include primary-button;
+        }
+      }
+    }
+  }
+
+  div[class*="showDropdown"] {
+    @include showDropdown;
+  }
+  div[class$="helper-text"] {
+    @include helper-text;
+  }
+
+  div[class*="tooltip"] {
+    @include tooltip;
+    @include hideTooltip;
+  }
+
+  div[class*="showTooltip"] {
+    @include showTooltip;
+  }
+}

@@ -6,7 +6,6 @@
 }
 
 div[class$=twoline-multiSelect-label-icon] {
-  margin: 20px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -17,7 +16,7 @@ div[class$=twoline-multiSelect-label-icon] {
   flex-direction: row;
   gap: 10px;
 }
-div[class$=twoline-multiSelect-label-icon] div small {
+div[class$=twoline-multiSelect-label-icon] > div:first-child small {
   background: url(https://www.linkpicture.com/q/sprites-large.svg);
   background-repeat: no-repeat;
   width: 20px;
@@ -31,7 +30,7 @@ div[class$=twoline-multiSelect-label-icon] div small {
   filter: brightness(0) saturate(100%) invert(85%) sepia(0%) saturate(0%) hue-rotate(209deg) brightness(84%) contrast(86%);
 }
 div[class$=twoline-multiSelect-label-icon] div[class$=twoline-multiSelect] div[class*=chip] {
-  margin-top: 10px;
+  margin-top: 20px;
   width: 400px;
   display: flex;
   align-items: center;
@@ -73,8 +72,12 @@ div[class$=twoline-multiSelect-label-icon] div[class$=twoline-multiSelect] div[c
   cursor: pointer;
   pointer-events: all;
 }
+div[class$=twoline-multiSelect-label-icon] div[class$=twoline-multiSelect] div[class$=helper-text] {
+  margin-top: 5px;
+}
 div[class$=twoline-multiSelect-label-icon] div[class$=twoline-multiSelect] div[class$=helper-text] span {
   font-size: 11px;
+  position: absolute;
 }
 div[class$=twoline-multiSelect-label-icon] div[class=inp-l] {
   display: flex;
@@ -122,21 +125,29 @@ div[class$=twoline-multiSelect-label-icon] div[class=inp-l] div:nth-child(2) {
 div[class$=twoline-multiSelect-label-icon] div[class=inp-l] div:nth-child(2) input {
   border: none;
   font-size: 13px;
-  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   outline: none;
   cursor: pointer;
   pointer-events: none;
 }
+div[class$=twoline-multiSelect-label-icon] div[class=inp-l] div:nth-child(2) input::-moz-placeholder {
+  font-style: italic;
+}
+div[class$=twoline-multiSelect-label-icon] div[class=inp-l] div:nth-child(2) input:-ms-input-placeholder {
+  font-style: italic;
+}
+div[class$=twoline-multiSelect-label-icon] div[class=inp-l] div:nth-child(2) input::placeholder {
+  font-style: italic;
+}
 div[class$=twoline-multiSelect-label-icon] div[class=inp-l] div:nth-child(2):focus-within {
   border: 1px solid #42a5f5;
 }
 div[class$=twoline-multiSelect-label-icon] div[class=inp-l] div:nth-child(2) small:first-child {
-  background: url(https://www.linkpicture.com/q/sprites-large.svg);
+  background: url(https://www.linkpicture.com/q/sprites-medium.svg);
   background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -184,28 +195,28 @@ div[class$=twoline-multiSelect-label-icon] div[class*=twoline-multiSelect-lists]
   cursor: pointer;
   background-color: #fff;
 }
-div[class$=twoline-multiSelect-label-icon] div[class*=twoline-multiSelect-lists] li div {
+div[class$=twoline-multiSelect-label-icon] div[class*=twoline-multiSelect-lists] li > div {
   pointer-events: none;
-  padding: 10px;
+  padding: 20px;
   width: auto;
   height: 56px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: row;
-  gap: 5px;
+  gap: 10px;
 }
-div[class$=twoline-multiSelect-label-icon] div[class*=twoline-multiSelect-lists] li div div {
+div[class$=twoline-multiSelect-label-icon] div[class*=twoline-multiSelect-lists] li > div div {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 5px;
 }
-div[class$=twoline-multiSelect-label-icon] div[class*=twoline-multiSelect-lists] li div div span:first-child {
+div[class$=twoline-multiSelect-label-icon] div[class*=twoline-multiSelect-lists] li > div div span:first-child {
   font-size: 13px;
 }
-div[class$=twoline-multiSelect-label-icon] div[class*=twoline-multiSelect-lists] li div div span:last-child {
+div[class$=twoline-multiSelect-label-icon] div[class*=twoline-multiSelect-lists] li > div div span:last-child {
   font-size: 11px;
 }
 div[class$=twoline-multiSelect-label-icon] div[class*=twoline-multiSelect-lists] li:hover {
@@ -238,19 +249,27 @@ div[class$=twoline-multiSelect-label-icon] div[class*=twoline-multiSelect-lists]
 div[class$=twoline-multiSelect-label-icon] div[class*=twoline-multiSelect-lists] div[class$=inn-inp-wrap] div[class$=inn-inp] input {
   border: none;
   font-size: 13px;
-  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   outline: none;
+}
+div[class$=twoline-multiSelect-label-icon] div[class*=twoline-multiSelect-lists] div[class$=inn-inp-wrap] div[class$=inn-inp] input::-moz-placeholder {
+  font-style: italic;
+}
+div[class$=twoline-multiSelect-label-icon] div[class*=twoline-multiSelect-lists] div[class$=inn-inp-wrap] div[class$=inn-inp] input:-ms-input-placeholder {
+  font-style: italic;
+}
+div[class$=twoline-multiSelect-label-icon] div[class*=twoline-multiSelect-lists] div[class$=inn-inp-wrap] div[class$=inn-inp] input::placeholder {
+  font-style: italic;
 }
 div[class$=twoline-multiSelect-label-icon] div[class*=twoline-multiSelect-lists] div[class$=inn-inp-wrap] div[class$=inn-inp]:focus-within {
   border: 1px solid #42a5f5;
 }
 div[class$=twoline-multiSelect-label-icon] div[class*=twoline-multiSelect-lists] div[class$=inn-inp-wrap] div[class$=inn-inp] small:first-child {
-  background: url(https://www.linkpicture.com/q/sprites-large.svg);
+  background: url(https://www.linkpicture.com/q/sprites-medium.svg);
   background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   display: flex;
   align-items: center;
   justify-content: center;

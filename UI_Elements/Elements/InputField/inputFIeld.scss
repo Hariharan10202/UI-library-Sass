@@ -25,6 +25,9 @@
       cursor: Misc.$pointer;
       pointer-events: Misc.$disabled-state;
     }
+    &::placeholder {
+      font-style: $font-italic;
+    }
   }
 
   &:focus-within {
@@ -32,7 +35,7 @@
   }
 
   small:first-child {
-    @include icon-large;
+    @include icon-medium;
     @include search;
     pointer-events: Misc.$disabled-state;
   }
@@ -48,6 +51,22 @@
   }
 }
 
+@mixin mainInput($search, $writable) {
+  @include display-flex(flex-start, center, 5px, column);
+  div:nth-child(1) {
+    @include display-flex(flex-start, center, 5px, row);
+    small {
+      @include icon-medium;
+    }
+    label {
+      font-size: $font-xm;
+    }
+  }
+  div:nth-child(2) {
+    @include inputField(search, true);
+  }
+}
+
 @mixin inputField-Label() {
   @include display-flex(flex-start, center, 5px, column);
   div:nth-child(1) {
@@ -60,7 +79,7 @@
     }
   }
   div:nth-child(2) {
-    @include inputField();
+    @include inputField;
   }
 }
 
@@ -124,6 +143,9 @@
     input {
       border: borderproperty.$border-none;
       outline: Misc.$disabled-state;
+      &::placeholder {
+        font-style: $font-italic;
+      }
     }
 
     small:first-child {
@@ -149,6 +171,10 @@
     height: Misc.$height;
     cursor: Misc.$pointer;
 
+    &:focus-within {
+      border: borderproperty.$focus-border;
+    }
+
     div[class$="twoline-inn"] {
       border: $border-none;
       @include display-flex(flex-start, flex-start, 0, column);
@@ -158,7 +184,11 @@
         outline: Misc.$disabled-state;
         font-size: $font-m;
         pointer-events: all;
+        &::placeholder {
+          font-style: $font-italic;
+        }
       }
+
       span {
         display: Misc.$display-none;
         font-size: $font-s;

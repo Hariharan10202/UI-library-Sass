@@ -1,0 +1,255 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: lato;
+}
+
+div[class$=ui-error-notification] div[class=m-btn-g] button:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 36px;
+  font-weight: 600;
+  font-size: 13px;
+}
+div[class$=ui-error-notification] div[class=m-btn-g] button {
+  display: none;
+}
+div[class$=ui-error-notification] div[class=m-btn-g] button:nth-child(1) {
+  background-color: #ffa000;
+  color: #333;
+  border: none;
+}
+
+div[class*=ui-notify] {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 36px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: 0.1s ease-in;
+  border-radius: 4px;
+  z-index: 99;
+}
+div[class*=ui-notify] div[class*=error-notify] {
+  background-color: #feeded;
+  border: 1px solid #ff4248;
+  border-radius: 4px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 50px;
+}
+div[class*=ui-notify] div[class*=error-notify] > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+}
+div[class*=ui-notify] div[class*=error-notify] > div small {
+  background: url(https://www.linkpicture.com/q/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  filter: brightness(0) saturate(100%) invert(54%) sepia(50%) saturate(5688%) hue-rotate(328deg) brightness(99%) contrast(132%);
+}
+div[class*=ui-notify] div[class*=error-notify] > div span {
+  font-size: 13px;
+  color: #ff4248;
+}
+div[class*=ui-notify] div[class*=error-notify] > small {
+  background: url(https://www.linkpicture.com/q/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: 0px -24px;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%) hue-rotate(325deg) brightness(89%) contrast(105%);
+  cursor: pointer;
+  filter: brightness(0) saturate(100%) invert(54%) sepia(50%) saturate(5688%) hue-rotate(328deg) brightness(99%) contrast(132%);
+}
+div[class*=ui-notify] div[class*=info-notify] {
+  background-color: #e9f0fd;
+  border: 1px solid #2e68cb;
+  border-radius: 4px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 50px;
+}
+div[class*=ui-notify] div[class*=info-notify] > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+}
+div[class*=ui-notify] div[class*=info-notify] > div small {
+  background: url(https://www.linkpicture.com/q/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  filter: brightness(0) saturate(100%) invert(32%) sepia(58%) saturate(1834%) hue-rotate(199deg) brightness(92%) contrast(86%);
+}
+div[class*=ui-notify] div[class*=info-notify] > div span {
+  font-size: 13px;
+  color: #2e68cb;
+}
+div[class*=ui-notify] div[class*=info-notify] > small {
+  background: url(https://www.linkpicture.com/q/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: 0px -24px;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%) hue-rotate(325deg) brightness(89%) contrast(105%);
+  cursor: pointer;
+  filter: brightness(0) saturate(100%) invert(32%) sepia(58%) saturate(1834%) hue-rotate(199deg) brightness(92%) contrast(86%);
+}
+div[class*=ui-notify] div[class*=warning-notify] {
+  background-color: #fdf4e9;
+  border: 1px solid #eb962f;
+  border-radius: 4px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 50px;
+}
+div[class*=ui-notify] div[class*=warning-notify] > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+}
+div[class*=ui-notify] div[class*=warning-notify] > div small {
+  background: url(https://www.linkpicture.com/q/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  filter: brightness(0) saturate(100%) invert(59%) sepia(66%) saturate(540%) hue-rotate(350deg) brightness(98%) contrast(88%);
+}
+div[class*=ui-notify] div[class*=warning-notify] > div span {
+  font-size: 13px;
+  color: #eb962f;
+}
+div[class*=ui-notify] div[class*=warning-notify] > div span b {
+  text-decoration: underline;
+  color: inherit;
+  font-style: italic;
+  cursor: pointer;
+}
+div[class*=ui-notify] div[class*=warning-notify] > small {
+  background: url(https://www.linkpicture.com/q/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: 0px -24px;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%) hue-rotate(325deg) brightness(89%) contrast(105%);
+  cursor: pointer;
+  filter: brightness(0) saturate(100%) invert(59%) sepia(66%) saturate(540%) hue-rotate(350deg) brightness(98%) contrast(88%);
+}
+div[class*=ui-notify] div[class*=success-notify] {
+  background-color: #edf7ed;
+  border: 1px solid #4caf4f;
+  border-radius: 4px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 50px;
+}
+div[class*=ui-notify] div[class*=success-notify] > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+}
+div[class*=ui-notify] div[class*=success-notify] > div small {
+  background: url(https://www.linkpicture.com/q/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  filter: brightness(0) saturate(100%) invert(60%) sepia(10%) saturate(3555%) hue-rotate(72deg) brightness(103%) contrast(58%);
+}
+div[class*=ui-notify] div[class*=success-notify] > div span {
+  font-size: 13px;
+  color: #4caf4f;
+}
+div[class*=ui-notify] div[class*=success-notify] > small {
+  background: url(https://www.linkpicture.com/q/sprites-small.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: 0px -24px;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%) hue-rotate(325deg) brightness(89%) contrast(105%);
+  cursor: pointer;
+  filter: brightness(0) saturate(100%) invert(60%) sepia(10%) saturate(3555%) hue-rotate(72deg) brightness(103%) contrast(58%);
+}
+
+div[class*=showNotify] {
+  opacity: 1;
+  transform: translateY(0px);
+}/*# sourceMappingURL=notification.css.map */

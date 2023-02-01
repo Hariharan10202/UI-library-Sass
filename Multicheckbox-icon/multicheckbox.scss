@@ -14,13 +14,12 @@
 }
 
 div[class$="multiSelect-label-icon"] {
-  margin: 20px;
   width: $width-fit;
   position: relative;
 
   @include display-flex(flex-start, flex-start, 10px, row);
 
-  div {
+  & > div:first-child {
     small {
       @include icon-large;
       @include userprofile;

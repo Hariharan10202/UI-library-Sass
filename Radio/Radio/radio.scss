@@ -22,7 +22,7 @@ body {
       pointer-events: $disabled-state;
       @include radio;
     }
-    span {
+    label {
       pointer-events: $disabled-state;
       font-size: typography.$font-m;
     }
@@ -40,7 +40,7 @@ body {
       @include radio;
       accent-color: color.$disabled-color;
     }
-    span {
+    label {
       font-size: typography.$font-m;
       color: color.$disabled-color;
     }

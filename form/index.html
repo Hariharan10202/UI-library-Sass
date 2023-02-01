@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../Autopopulate/autopopulate.css" />
     <link rel="stylesheet" href="../GrowInput/growInput.css" />
+    <link rel="stylesheet" href="../Panel/panel.css" />
+    <link rel="stylesheet" href="../Multicheckbox/multicheckbox.css" />
+    <link rel="stylesheet" href="../Select/select.css" />
+    <link rel="stylesheet" href="../Twoline-Autopopulate/autopopulate.css" />
+    <link
+      rel="stylesheet"
+      href="../TwolineMulticheckbox/twolinemulticheckbox.css"
+    />
     <link rel="stylesheet" href="./styles.css" />
     <title>Document</title>
   </head>
@@ -15,10 +23,8 @@
         <div class="inp-l">
           <div><label for="">Label</label></div>
           <div class="mainInput">
-            <small></small
-            ><input type="text" placeholder="Type 1st three letters..." /><small
+            <input type="text" placeholder="Type 1st three letters..." /><small
               class="hideCloseAction"
-              onclick="clearAutopopulate(event)"
             ></small>
           </div>
         </div>
@@ -30,23 +36,23 @@
             </div>
           </div>
           <div class="autopop-list">
-            <li class="ind-li" onclick="autopopHandler(event)">
+            <li class="ind-li">
               <div>
                 <span>Option 1</span>
               </div>
             </li>
-            <li class="ind-li" onclick="autopopHandler(event)">
+            <li class="ind-li">
               <div>
                 <span>Option 2</span>
               </div>
             </li>
-            <li class="ind-li" onclick="autopopHandler(event)">
+            <li class="ind-li">
               <div><span>Option 3</span></div>
             </li>
-            <li class="ind-li" onclick="autopopHandler(event)">
+            <li class="ind-li">
               <div><span>Option 4</span></div>
             </li>
-            <li class="ind-li" onclick="autopopHandler(event)">
+            <li class="ind-li">
               <div><span>Option 5</span></div>
             </li>
             <div class="notFound"><span>No Results Found</span></div>
@@ -70,32 +76,380 @@
             </div>
           </div>
           <div class="growInput-list">
-            <li class="ind-li" onclick="growInputHandler(event)">
+            <li class="ind-li">
               <div>
                 <span>Option 1</span>
               </div>
             </li>
-            <li class="ind-li" onclick="growInputHandler(event)">
+            <li class="ind-li">
               <div>
                 <span>Option 2</span>
               </div>
             </li>
-            <li class="ind-li" onclick="growInputHandler(event)">
+            <li class="ind-li">
               <div><span>Option 3</span></div>
             </li>
-            <li class="ind-li" onclick="growInputHandler(event)">
+            <li class="ind-li">
               <div><span>Option 4</span></div>
             </li>
-            <li class="ind-li" onclick="growInputHandler(event)">
+            <li class="ind-li">
               <div><span>Option 5</span></div>
             </li>
             <div class="notFound"><span>No Results Found</span></div>
           </div>
         </div>
       </div>
+      <div class="panel-dropdown">
+        <div class="inp-l">
+          <div><label for="">Label</label></div>
+          <div class="mainInput">
+            <input type="text" placeholder="Select" /><small></small>
+          </div>
+        </div>
+        <div class="helper-text"><span>Helper text</span></div>
+        <div class="panel-dp">
+          <form>
+            <div class="top">
+              <div>
+                <div><span>Heading 1</span></div>
+                <div>
+                  <div class="checkbox">
+                    <input
+                      type="checkbox"
+                      id="checkbox1"
+                      value="checkbox1"
+                      name="checkbox 1"
+                    /><label for="checkbox1">Checkbox 1</label>
+                  </div>
+                  <div class="checkbox">
+                    <input
+                      type="checkbox"
+                      id="checkbox2"
+                      value="checkbox2"
+                      name="checkbox 2"
+                    /><label for="checkbox2">Checkbox 2</label>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div><span>Heading 2</span></div>
+                <div>
+                  <div class="checkbox">
+                    <input
+                      type="checkbox"
+                      id="checkbox3"
+                      value="checkbox3"
+                      name="checkbox 3"
+                    /><label for="checkbox3">Checkbox 3</label>
+                  </div>
+                  <div class="checkbox">
+                    <input
+                      type="checkbox"
+                      id="checkbox4"
+                      value="checkbox4"
+                      name="checkbox 4"
+                    /><label for="checkbox4">Checkbox 4</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="middle">
+              <div>
+                <span>Heading 3</span>
+                <div>
+                  <div class="radio">
+                    <input
+                      type="radio"
+                      id="radio1"
+                      value="radio1"
+                      name="gender"
+                      checked
+                    />
+                    <label for="radio1">Radio 1</label>
+                  </div>
+                  <div class="radio">
+                    <input
+                      type="radio"
+                      id="radio2"
+                      value="radio2"
+                      name="gender"
+                      checked
+                    />
+                    <label for="radio2">Radio 2</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bottom">
+              <div>
+                <span>Heading 4</span>
+                <div>
+                  <div><span>Input 1</span><input type="number" /></div>
+                  <div><span>Input 2</span><input type="number" /></div>
+                </div>
+              </div>
+            </div>
+            <div><button type="button" class="doneBtn">Submit</button></div>
+          </form>
+        </div>
+        <div class="tooltip"></div>
+      </div>
+      <div class="multiSelect-label">
+        <div class="multiSelect">
+          <div class="inp-l">
+            <div><label for="">Label</label></div>
+            <div class="mainInput">
+              <input type="text" readonly placeholder="Select" /><small></small>
+            </div>
+          </div>
+          <div class="helper-text"><span>Helper</span></div>
+          <div>
+            <div class="multiSelect-lists">
+              <div>
+                <div class="inn-inp-wrap">
+                  <div class="inn-inp">
+                    <input
+                      type="text"
+                      onkeyup="multiSelectSearchhandler(event)"
+                      placeholder="Select"
+                    /><small class="search"></small>
+                  </div>
+                </div>
+                <div class="li-head-wrap">
+                  <div>
+                    <span>List Heading</span>
+                    <div>
+                      <span>Clear All</span>
+                      <span>Select All</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-      <script src="../Autopopulate/script.js"></script>
-      <script src="../GrowInput/script.js"></script>
+              <div class="multiSelect-list">
+                <li class="ind-li">
+                  <div>
+                    <input type="checkbox" />
+                    <span>Option 1</span>
+                  </div>
+                </li>
+                <li class="ind-li">
+                  <div>
+                    <input type="checkbox" />
+                    <span>Option 2</span>
+                  </div>
+                </li>
+                <li class="ind-li">
+                  <div>
+                    <input type="checkbox" />
+                    <span>Option 3</span>
+                  </div>
+                </li>
+                <li class="ind-li">
+                  <div>
+                    <input type="checkbox" />
+                    <span>Option 4</span>
+                  </div>
+                </li>
+                <li class="ind-li">
+                  <div>
+                    <input type="checkbox" />
+                    <span>Option 5</span>
+                  </div>
+                </li>
+                <div class="notFound"><span>No Results Found</span></div>
+              </div>
+              <button class="doneBtn">Done</button>
+            </div>
+          </div>
+          <div class="tooltip"></div>
+        </div>
+      </div>
+      <div class="select">
+        <div class="inp-l">
+          <div><label for="">Label</label></div>
+          <div class="mainInput">
+            <input type="text" readonly placeholder="Select" /><small></small>
+          </div>
+        </div>
+        <div class="helper-text"><span>Helper text</span></div>
+        <div class="select-lists">
+          <li class="inp-li">
+            <div>
+              <span>Option 1</span>
+            </div>
+          </li>
+          <li class="inp-li">
+            <div>
+              <span>Option 2</span>
+            </div>
+          </li>
+          <li class="inp-li">
+            <div><span>Option 3</span></div>
+          </li>
+          <li class="inp-li">
+            <div><span>Option 4</span></div>
+          </li>
+          <li class="inp-li">
+            <div><span>Option 5</span></div>
+          </li>
+        </div>
+      </div>
+      <div class="twoline-autopop">
+        <div class="inp-l">
+          <div><label for="">Label</label></div>
+          <div class="mainInput">
+            <div class="twoline-inn">
+              <input type="text" placeholder="Type 1st three letters..." />
+              <span></span>
+            </div>
+            <small></small>
+          </div>
+        </div>
+        <div class="helper-text"><span>Helper text</span></div>
+        <div class="twoline-autopop-lists">
+          <div class="li-head-wrap">
+            <div>
+              <span>List Heading</span>
+            </div>
+          </div>
+          <div class="twoline-autopop-list">
+            <li class="ind-li">
+              <div>
+                <div>
+                  <span>Option 1</span>
+                  <span>Sub text 1</span>
+                </div>
+              </div>
+            </li>
+            <li class="ind-li">
+              <div>
+                <div>
+                  <span>Option 2</span>
+                  <span>Sub text 2</span>
+                </div>
+              </div>
+            </li>
+            <li class="ind-li">
+              <div>
+                <div>
+                  <span>Option 3</span>
+                  <span>Sub text 3</span>
+                </div>
+              </div>
+            </li>
+            <li class="ind-li">
+              <div>
+                <div>
+                  <span>Option 4</span>
+                  <span>Sub text 4</span>
+                </div>
+              </div>
+            </li>
+            <li class="ind-li">
+              <div>
+                <div>
+                  <span>Option 5</span>
+                  <span>Sub text 5</span>
+                </div>
+              </div>
+            </li>
+            <div class="notFound"><span>No Results Found</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="twoline-multiSelect-label">
+        <div class="twoline-multiSelect">
+          <div class="inp-l">
+            <div><label for="">Label</label></div>
+            <div class="mainInput">
+              <input type="text" readonly placeholder="Select" /><small></small>
+            </div>
+          </div>
+          <div class="helper-text"><span>Helper</span></div>
+          <div>
+            <div class="twoline-multiSelect-lists">
+              <div>
+                <div class="inn-inp-wrap">
+                  <div class="inn-inp">
+                    <input type="text" placeholder="Select" /><small
+                      class="search"
+                    ></small>
+                  </div>
+                </div>
+                <div class="li-head-wrap">
+                  <div>
+                    <span>List Heading</span>
+                    <div>
+                      <span>Clear All</span>
+                      <span>Select All</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="twoline-multiSelect-list">
+                <li class="ind-li">
+                  <div>
+                    <input type="checkbox" />
+                    <div>
+                      <span>Option 1</span>
+                      <span>Sub text 1</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="ind-li">
+                  <div>
+                    <input type="checkbox" />
+                    <div>
+                      <span>Option 2</span>
+                      <span>Sub text 2</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="ind-li">
+                  <div>
+                    <input type="checkbox" />
+                    <div>
+                      <span>Option 3</span>
+                      <span>Sub text 3</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="ind-li">
+                  <div>
+                    <input type="checkbox" />
+                    <div>
+                      <span>Option 4</span>
+                      <span>Sub text 4</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="ind-li">
+                  <div>
+                    <input type="checkbox" />
+                    <div>
+                      <span>Option 5</span>
+                      <span>Sub text 5</span>
+                    </div>
+                  </div>
+                </li>
+                <div class="notFound"><span>No Results Found</span></div>
+              </div>
+              <button class="doneBtn">Done</button>
+            </div>
+          </div>
+          <div class="chip"></div>
+        </div>
+      </div>
     </div>
+
+    <script src="../Autopopulate/script.js"></script>
+    <script src="../GrowInput/script.js"></script>
+    <script src="../Multicheckbox/script.js"></script>
+    <script src="../Panel/script.js"></script>
+    <script src="../Select/script.js"></script>
+    <script src="../Twoline-Autopopulate/script.js"></script>
+    <script src="../TwolineMulticheckbox/script.js"></script>
   </body>
 </html>

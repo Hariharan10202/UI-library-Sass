@@ -1,0 +1,30 @@
+@use "../Base/Misc/Misc.scss" as *;
+@use "../UI_Elements/Elements/InputField/inputFIeld.scss" as *;
+@use "../UI_Elements/Elements/Dropdown/Dropdown_anatomy.scss" as *;
+@use "../Base/Typography/typography.scss" as *;
+@use "../Base/Alignment_mixin/alignment.scss" as *;
+@use "../Base/Iconography/iconography.scss" as *;
+
+* {
+  @include begin;
+}
+
+.container {
+  margin: 20px;
+  @include display-flex(center, flex-start, 20px, row);
+}
+
+div[class$="ui-input-icon"] {
+  @include display-flex(flex-start, flex-start, 5px, row);
+
+  & > div:first-child {
+    small {
+      @include icon-large;
+      @include userprofile;
+    }
+  }
+
+  div[class="inp-l"] {
+    @include mainInput(search, true);
+  }
+}

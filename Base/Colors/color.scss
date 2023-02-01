@@ -7,7 +7,6 @@ $transparent: transparent;
 $tertiaryBtn: #f1f1f1;
 $hyperBtn: #42a5f5;
 $hyperBtnHovered: #2285d0;
-$error: rgb(255, 0, 0);
 $disabled-backgroundColor: #cccccc;
 $disabled-color: #888888;
 $border-focus: #42a5f5;
@@ -17,3 +16,13 @@ $list-hovered-color: #2185d0;
 $list-header: #e0e0e0;
 $backdrop-color: rgba(0, 0, 0, 0.478);
 $list-selected: #e6effc;
+
+$error: #ff4248;
+$info: #2e68cb;
+$warning: #eb962f;
+$success: #4caf4f;
+
+$error-bg: #feeded;
+$info-bg: #e9f0fd;
+$warning-bg: #fdf4e9;
+$success-bg: #edf7ed;

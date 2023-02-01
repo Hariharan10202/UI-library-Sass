@@ -2,12 +2,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: lato;
+  font-family: sans-serif;
 }
 
 div[class$=autopop] {
   position: relative;
-  margin: 20px;
 }
 div[class$=autopop] div[class=inp-l] {
   display: flex;
@@ -41,19 +40,27 @@ div[class$=autopop] div[class=inp-l] div:nth-child(2) {
 div[class$=autopop] div[class=inp-l] div:nth-child(2) input {
   border: none;
   font-size: 13px;
-  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   outline: none;
+}
+div[class$=autopop] div[class=inp-l] div:nth-child(2) input::-moz-placeholder {
+  font-style: italic;
+}
+div[class$=autopop] div[class=inp-l] div:nth-child(2) input:-ms-input-placeholder {
+  font-style: italic;
+}
+div[class$=autopop] div[class=inp-l] div:nth-child(2) input::placeholder {
+  font-style: italic;
 }
 div[class$=autopop] div[class=inp-l] div:nth-child(2):focus-within {
   border: 1px solid #42a5f5;
 }
 div[class$=autopop] div[class=inp-l] div:nth-child(2) small:first-child {
-  background: url(https://www.linkpicture.com/q/sprites-large.svg);
+  background: url(https://www.linkpicture.com/q/sprites-medium.svg);
   background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,6 +106,7 @@ div[class$=autopop] div[class=inp-l] div:nth-child(2) small:last-child {
   gap: 0px;
   background-position: 0px -24px;
   filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%) hue-rotate(325deg) brightness(89%) contrast(105%);
+  cursor: pointer;
 }
 div[class$=autopop] div[class=inp-l] small[class$=hideCloseAction] {
   opacity: 0;
@@ -121,7 +129,8 @@ div[class$=autopop] div[class*=autopop-lists] {
   transition: 0.1s ease-in;
 }
 div[class$=autopop] div[class*=autopop-lists] div[class$=multiSelect-list],
-div[class$=autopop] div[class*=autopop-lists] div[class$=autopop-list] {
+div[class$=autopop] div[class*=autopop-lists] div[class$=autopop-list],
+div[class$=autopop] div[class*=autopop-lists] div[class$=panel-dp] {
   overflow: scroll;
   max-height: 200px;
 }
@@ -131,10 +140,12 @@ div[class$=autopop] div[class*=autopop-lists] li {
   cursor: pointer;
   background-color: #fff;
 }
-div[class$=autopop] div[class*=autopop-lists] li div {
+div[class$=autopop] div[class*=autopop-lists] li > div {
   pointer-events: none;
   padding: 20px;
-  width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 46px;
   display: flex;
   align-items: center;
@@ -142,7 +153,7 @@ div[class$=autopop] div[class*=autopop-lists] li div {
   flex-direction: row;
   gap: 10px;
 }
-div[class$=autopop] div[class*=autopop-lists] li div small b {
+div[class$=autopop] div[class*=autopop-lists] li > div small b {
   background: url(https://www.linkpicture.com/q/sprites-medium.svg);
   background-repeat: no-repeat;
   width: 16px;
@@ -155,11 +166,10 @@ div[class$=autopop] div[class*=autopop-lists] li div small b {
   background-position: 0px 0;
   filter: brightness(0) saturate(100%) invert(85%) sepia(0%) saturate(0%) hue-rotate(209deg) brightness(84%) contrast(86%);
 }
-div[class$=autopop] div[class*=autopop-lists] li div span {
+div[class$=autopop] div[class*=autopop-lists] li > div span {
   cursor: pointer;
   font-size: 13px;
   pointer-events: none;
-  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -207,6 +217,9 @@ div[class$=autopop] div[class*=autopop-lists] div[class$=autopop-list] div[class
   font-weight: 600;
   color: black;
   font-size: 13px;
+}
+div[class$=autopop] div[class$=helper-text] {
+  margin-top: 5px;
 }
 div[class$=autopop] div[class$=helper-text] span {
   font-size: 11px;

@@ -13,7 +13,7 @@
       <div class="twoline-multiSelect">
         <div class="inp-l">
           <div><label for="">Label</label></div>
-          <div class="mainInput" onclick="toggleDropdownHandler(event)">
+          <div class="mainInput">
             <input type="text" readonly placeholder="Select" /><small></small>
           </div>
         </div>
@@ -23,19 +23,17 @@
             <div>
               <div class="inn-inp-wrap">
                 <div class="inn-inp">
-                  <input
-                    type="text"
-                    onkeyup="twolineMultiSelectSearchhandler(event)"
-                    placeholder="Select"
-                  /><small class="search"></small>
+                  <input type="text" placeholder="Select" /><small
+                    class="search"
+                  ></small>
                 </div>
               </div>
               <div class="li-head-wrap">
                 <div>
                   <span>List Heading</span>
                   <div>
-                    <span onclick="clearAllHandler(event)">Clear All</span>
-                    <span onclick="selectAllHandler(event)">Select All</span>
+                    <span>Clear All</span>
+                    <span>Select All</span>
                   </div>
                 </div>
               </div>

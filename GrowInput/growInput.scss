@@ -11,7 +11,6 @@
 
 div[class$="growInput"] {
   position: relative;
-  margin: 20px;
 
   div[class="inp-l"] {
     @include grow-inp;
@@ -47,10 +46,7 @@ div[class$="growInput"] {
   }
 
   div[class$="helper-text"] {
-    span {
-      font-size: $font-s;
-      position: absolute;
-    }
+    @include helper-text;
   }
 
   div[class*="showDropdown"] {

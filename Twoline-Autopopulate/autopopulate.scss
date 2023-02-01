@@ -9,7 +9,6 @@
 
 div[class$="twoline-autopop"] {
   position: relative;
-  margin: 20px;
 
   div[class="inp-l"] {
     @include twoline-autopop-inp;

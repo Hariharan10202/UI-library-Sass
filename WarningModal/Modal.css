@@ -5,9 +5,6 @@
   font-family: lato;
 }
 
-div[class$=conf-Modal] {
-  margin: 20px;
-}
 div[class$=conf-Modal] div button {
   display: flex;
   align-items: center;
@@ -34,14 +31,14 @@ div[class$=conf-Modal] div[class*=Modal-content] {
   background-color: #fff;
   border-radius: 4px;
 }
-div[class$=conf-Modal] div[class*=Modal-content] div:nth-child(1) {
+div[class$=conf-Modal] div[class*=Modal-content] > div:nth-child(1) {
   padding: 20px;
   border-bottom: 1px solid #afafaf;
 }
-div[class$=conf-Modal] div[class*=Modal-content] div:nth-child(1) h2 {
+div[class$=conf-Modal] div[class*=Modal-content] > div:nth-child(1) h2 {
   font-size: 16px;
 }
-div[class$=conf-Modal] div[class*=Modal-content] div:nth-child(2) {
+div[class$=conf-Modal] div[class*=Modal-content] > div:nth-child(2) {
   padding: 20px;
   display: flex;
   align-items: flex-start;
@@ -49,8 +46,8 @@ div[class$=conf-Modal] div[class*=Modal-content] div:nth-child(2) {
   flex-direction: row;
   gap: 20px;
 }
-div[class$=conf-Modal] div[class*=Modal-content] div:nth-child(2) button:nth-child(2),
-div[class$=conf-Modal] div[class*=Modal-content] div:nth-child(2) button:nth-child(1) {
+div[class$=conf-Modal] div[class*=Modal-content] > div:nth-child(2) button:nth-child(2),
+div[class$=conf-Modal] div[class*=Modal-content] > div:nth-child(2) button:nth-child(1) {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,17 +60,17 @@ div[class$=conf-Modal] div[class*=Modal-content] div:nth-child(2) button:nth-chi
   font-weight: 600;
   font-size: 13px;
 }
-div[class$=conf-Modal] div[class*=Modal-content] div:nth-child(2) button:nth-child(2) {
+div[class$=conf-Modal] div[class*=Modal-content] > div:nth-child(2) button:nth-child(2) {
   background-color: #ffa000;
   color: #333;
   border: none;
 }
-div[class$=conf-Modal] div[class*=Modal-content] div:nth-child(2) button:nth-child(1) {
+div[class$=conf-Modal] div[class*=Modal-content] > div:nth-child(2) button:nth-child(1) {
   background-color: #fff;
   color: #333;
   border: 1px solid #233669;
 }
-div[class$=conf-Modal] div[class*=Modal-content] div:nth-child(2) button:nth-child(1):hover {
+div[class$=conf-Modal] div[class*=Modal-content] > div:nth-child(2) button:nth-child(1):hover {
   background-color: #233669;
   color: #fff;
 }

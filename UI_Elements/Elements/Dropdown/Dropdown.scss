@@ -6,7 +6,6 @@
 }
 
 .container {
-  margin: 20px;
   div[class$="lists"] {
     @include dropdown-lists;
   }

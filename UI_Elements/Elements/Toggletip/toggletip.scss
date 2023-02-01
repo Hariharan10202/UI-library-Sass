@@ -1,0 +1,50 @@
+@use "../../../Base/Misc/Misc.scss" as *;
+@use "../../../Base/Typography/typography.scss" as *;
+@use "../../../Base/Spacing/spacing.scss" as *;
+@use "../../../Base/Colors/color.scss" as *;
+@use "../../../Base/Borders/borderproperty.scss" as *;
+
+@mixin showToggletip {
+  opacity: $opacity-1;
+  pointer-events: $abled-state;
+}
+
+@mixin hideToggletip {
+  opacity: $opacity-0;
+  pointer-events: $disabled-state;
+  transition: $transistion;
+}
+
+@mixin Toggle-tip {
+  & > div[class*="toggle-tip"] {
+    width: $width-fit;
+    background-color: $black;
+    color: $white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: $poa;
+    z-index: 1;
+    top: 200%;
+    left: 50%;
+    margin-left: -60px;
+    @include hideToggletip();
+  }
+
+  & > div[class*="toggle-tip"] * {
+    padding: $p-10;
+    font-size: $font-m;
+  }
+
+  & > div[class*="toggle-tip"]::before {
+    content: "";
+    position: absolute;
+    top: -110%;
+    left: 50%;
+    margin-left: -20px;
+    border-width: 20px;
+    border-style: solid;
+    border-color: $black transparent transparent transparent;
+    transform: rotate(180deg);
+  }
+}

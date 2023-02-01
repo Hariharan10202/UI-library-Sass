@@ -30,7 +30,7 @@ body {
   width: 20px;
   height: 20px;
 }
-.radio div span {
+.radio div label {
   pointer-events: none;
   font-size: 13px;
 }
@@ -57,7 +57,7 @@ body {
   height: 20px;
   accent-color: #888888;
 }
-.radio-disabled div span {
+.radio-disabled div label {
   font-size: 13px;
   color: #888888;
 }/*# sourceMappingURL=radio.css.map */

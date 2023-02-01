@@ -1,0 +1,43 @@
+@use "../Button_Anatomy/button_anatomy.scss" as *;
+@use "../Button_Anatomy/button-styles.scss" as *;
+
+@use "../../Base/Alignment_mixin/alignment.scss" as *;
+@use "../../Base/Iconography/iconography.scss" as *;
+@use "../../Base/Misc/Misc.scss" as *;
+
+* {
+  @include begin;
+}
+
+div[class$="container"] {
+  margin-top: 20px;
+  @include display-flex(center, center, 0, column);
+}
+
+div[class$="hl-btn-g"] {
+  @include display-flex(center, center, 20px, row);
+  button {
+    display: none;
+  }
+
+  button {
+    @include button;
+    @include hyper-link-button;
+
+    small {
+      @include icon-small;
+      @include downarrow;
+      @include icon-hyper;
+    }
+
+    span + small {
+      display: none;
+    }
+
+    &:hover {
+      small {
+        @include icon-hyper-hovered;
+      }
+    }
+  }
+}

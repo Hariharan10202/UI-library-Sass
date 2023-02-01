@@ -1,0 +1,340 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: lato;
+}
+
+div[class$=panel-dropdown] {
+  position: relative;
+  margin: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+div[class$=panel-dropdown] div[class=inp-l] {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+div[class$=panel-dropdown] div[class=inp-l] div:nth-child(1) {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+}
+div[class$=panel-dropdown] div[class=inp-l] div:nth-child(1) small {
+  background: url(https://www.linkpicture.com/q/sprites-medium.svg);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+}
+div[class$=panel-dropdown] div[class=inp-l] div:nth-child(1) label {
+  font-size: 16px;
+}
+div[class$=panel-dropdown] div[class=inp-l] div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #afafaf;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 4px;
+  height: 36px;
+  cursor: pointer;
+}
+div[class$=panel-dropdown] div[class=inp-l] div:nth-child(2) input {
+  border: none;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  outline: none;
+  cursor: pointer;
+  pointer-events: none;
+}
+div[class$=panel-dropdown] div[class=inp-l] div:nth-child(2) input::-moz-placeholder {
+  font-style: italic;
+}
+div[class$=panel-dropdown] div[class=inp-l] div:nth-child(2) input:-ms-input-placeholder {
+  font-style: italic;
+}
+div[class$=panel-dropdown] div[class=inp-l] div:nth-child(2) input::placeholder {
+  font-style: italic;
+}
+div[class$=panel-dropdown] div[class=inp-l] div:nth-child(2):focus-within {
+  border: 1px solid #42a5f5;
+}
+div[class$=panel-dropdown] div[class=inp-l] div:nth-child(2) small:first-child {
+  background: url(https://www.linkpicture.com/q/sprites-medium.svg);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: 0px -128px;
+  filter: brightness(0) saturate(100%) invert(85%) sepia(0%) saturate(0%) hue-rotate(209deg) brightness(84%) contrast(86%);
+  pointer-events: none;
+}
+div[class$=panel-dropdown] div[class=inp-l] div:nth-child(2) small:last-child {
+  background: url(https://www.linkpicture.com/q/sprites-medium.svg);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: -32px 0;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%) hue-rotate(325deg) brightness(89%) contrast(105%);
+  pointer-events: none;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] {
+  box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14), 0 5px 24px 4px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  z-index: 99;
+  background-color: #fff;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.1s ease-in;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] div[class$=multiSelect-list],
+div[class$=panel-dropdown] div[class*=panel-dp] div[class$=autopop-list],
+div[class$=panel-dropdown] div[class*=panel-dp] div[class$=panel-dp] {
+  overflow: scroll;
+  max-height: 200px;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] li {
+  list-style: none;
+  display: block;
+  cursor: pointer;
+  background-color: #fff;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] li > div {
+  pointer-events: none;
+  padding: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 10px;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] li > div small b {
+  background: url(https://www.linkpicture.com/q/sprites-medium.svg);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-position: 0px 0;
+  filter: brightness(0) saturate(100%) invert(85%) sepia(0%) saturate(0%) hue-rotate(209deg) brightness(84%) contrast(86%);
+}
+div[class$=panel-dropdown] div[class*=panel-dp] li > div span {
+  cursor: pointer;
+  font-size: 13px;
+  pointer-events: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] li:hover {
+  background-color: #f1f1f1;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] form div[class$=top],
+div[class$=panel-dropdown] div[class*=panel-dp] form div[class$=middle],
+div[class$=panel-dropdown] div[class*=panel-dp] form div[class$=bottom] {
+  padding: 20px;
+  border-bottom: 1px solid #afafaf;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] form div[class$=top] {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 100px;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] form div[class$=top] > div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] form div[class$=top] > div > :first-child span {
+  font-size: 13px;
+  font-weight: 600;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] form div[class$=top] > div > :last-child {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] form div[class$=top] > div > :last-child > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] form div[class$=top] > div > :last-child > div input {
+  width: 20px;
+  height: 20px;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] form div[class$=top] > div > :last-child label {
+  font-size: 13px;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] form div[class$=middle] > div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] form div[class$=middle] > div span {
+  font-size: 13px;
+  font-weight: 600;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] form div[class$=middle] > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 20px;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] form div[class$=middle] > div > div div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] form div[class$=middle] > div > div div input {
+  width: 20px;
+  height: 20px;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] form div[class$=middle] > div > div div label {
+  font-size: 13px;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] form div[class$=bottom] > div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] form div[class$=bottom] > div > span {
+  font-size: 13px;
+  font-weight: 600;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] form div[class$=bottom] > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 20px;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] form div[class$=bottom] > div > div div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 5px;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] form div[class$=bottom] > div > div div input {
+  height: 36px;
+  padding: 10px;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] form div[class$=bottom] > div > div div span {
+  font-size: 13px;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] form > :last-child {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  gap: 0;
+}
+div[class$=panel-dropdown] div[class*=panel-dp] form > :last-child button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 36px;
+  font-weight: 600;
+  font-size: 13px;
+  background-color: #ffa000;
+  color: #333;
+  border: none;
+}
+div[class$=panel-dropdown] div[class*=showDropdown] {
+  opacity: 1;
+  pointer-events: all;
+}
+div[class$=panel-dropdown] div[class$=helper-text] {
+  margin-top: 5px;
+}
+div[class$=panel-dropdown] div[class$=helper-text] span {
+  font-size: 11px;
+  position: absolute;
+}
+div[class$=panel-dropdown] div[class*=tooltip] {
+  position: relative;
+  pointer-events: none;
+  transition: 0.1s ease-in;
+  transform: scale(0);
+}
+div[class$=panel-dropdown] div[class*=tooltip] div {
+  background-color: #333;
+  padding: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 4px;
+  position: absolute;
+  left: 30%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 5px;
+}
+div[class$=panel-dropdown] div[class*=tooltip] div span {
+  color: #fff;
+  font-size: 13px;
+}
+div[class$=panel-dropdown] div[class*=showTooltip] {
+  pointer-events: all;
+  transform: scale(100%);
+}/*# sourceMappingURL=panel.css.map */

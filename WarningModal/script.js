@@ -1,8 +1,14 @@
 modalProperty = {
-  modal: document.querySelector("Modal-400"),
-  modalAction: document.querySelector(".modalAction"),
-  closeModalAction1: document.querySelector(".closeModalAction1"),
-  closeModalAction2: document.querySelector(".closeModalAction2"),
+  modal: document.querySelector(".conf-Modal"),
+  modalAction:
+    document.querySelector(".conf-Modal").lastElementChild
+      .previousElementSibling.firstElementChild,
+  closeModalAction1:
+    document.querySelector(".conf-Modal").lastElementChild.lastElementChild
+      .lastElementChild,
+  closeModalAction2:
+    document.querySelector(".conf-Modal").lastElementChild.lastElementChild
+      .firstElementChild,
   body: document.querySelector("body"),
 };
 
@@ -43,6 +49,9 @@ const closeCall = () => {
 
 const closeModal = () => {
   modalProperty.closeModalAction2.addEventListener("click", () => {
+    closeCall();
+  });
+  modalProperty.closeModalAction1.addEventListener("click", () => {
     closeCall();
   });
 };

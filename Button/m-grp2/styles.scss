@@ -1,0 +1,60 @@
+@use "../Button_Anatomy/button_anatomy.scss" as *;
+@use "../Button_Anatomy/button-styles.scss" as *;
+
+@use "../../Base/Alignment_mixin/alignment.scss" as *;
+@use "../../Base/Iconography/iconography.scss" as *;
+@use "../../Base/Misc/Misc.scss" as *;
+
+* {
+  @include begin;
+}
+
+div[class$="container"] {
+  margin-top: 20px;
+  @include display-flex(center, center, 0, column);
+}
+
+div[class="m-btn-g"] {
+  @include display-flex(center, center, 20px, row);
+
+  button {
+    display: none;
+  }
+
+  button[class="pri-btn"],
+  button[class="sec-btn"],
+  button[class="ter-btn"] {
+    @include button;
+  }
+
+  button[class="pri-btn"] {
+    @include primary-button;
+
+    small {
+      @include icon-small;
+      @include downarrow;
+    }
+  }
+
+  button[class="sec-btn"] {
+    @include secondary-button;
+    small {
+      @include icon-small;
+      @include downarrow;
+    }
+
+    &:hover {
+      small {
+        @include icon-hovered;
+      }
+    }
+  }
+
+  button[class="ter-btn"] {
+    @include tertiary-button;
+    small {
+      @include icon-small;
+      @include downarrow;
+    }
+  }
+}

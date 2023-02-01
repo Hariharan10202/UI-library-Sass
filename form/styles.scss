@@ -14,5 +14,6 @@
 }
 
 div[class$="container"] {
-  @include display-flex(center, center, 50px, row);
+  @include display-flex(flex-start, center, 100px, row);
+  flex-wrap: wrap;
 }

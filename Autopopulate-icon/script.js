@@ -1,11 +1,29 @@
-autopopProperty = {
-  inputFieldWidth: document.querySelector(".inp-l"),
-  mainInput: document.querySelector(".mainInput"),
-  inputField: document.querySelector(".inp-l").children[1].children[1],
-  autpopList: document.querySelector(".autopop-list"),
-  autpopLists: document.querySelector(".autopop-lists"),
-  individualList: document.querySelectorAll(".ind-li"),
-  listHeading: document.querySelector(".li-head-wrap"),
+const autopopProperty = {
+  mainComponent: document.querySelector(".autopop-icon"),
+  inputFieldWidth:
+    document.querySelector(".autopop-icon").lastElementChild.firstElementChild,
+  sample: this.inputFieldWidth,
+  mainInput:
+    document.querySelector(".autopop-icon").lastElementChild.firstElementChild
+      .lastElementChild,
+  inputField:
+    document.querySelector(".autopop-icon").lastElementChild.firstElementChild
+      .lastElementChild.lastElementChild.previousElementSibling,
+
+  autpopList:
+    document.querySelector(".autopop-icon").lastElementChild.lastElementChild
+      .lastElementChild,
+  autpopLists:
+    document.querySelector(".autopop-icon").lastElementChild.lastElementChild,
+  individualList: document
+    .querySelector(".autopop")
+    .lastElementChild.querySelectorAll(".ind-li"),
+  listHeading:
+    document.querySelector(".autopop-icon").lastElementChild.lastElementChild
+      .firstElementChild,
+  closeAction:
+    document.querySelector(".autopop-icon").lastElementChild.firstElementChild
+      .lastElementChild.lastElementChild,
   deSelectOptionList: () => {
     for (
       let index = 0;
@@ -40,80 +58,107 @@ autopopProperty = {
   },
   triggerAutopopulateHandler: () => {
     autopopProperty.inputField.addEventListener("keyup", (e) => {
-      autoPopSearchHandler(e.target.value);
+      autopopProperty.autoPopSearchHandler(e.target.value);
     });
+  },
+  autopopHandler: (e) => {
+    autopopProperty.deSelectOptionList();
+    e.target.classList.add("currentSelectedList");
+    const targetData = e.target.children[0].children[0].textContent;
+    autopopProperty.inputField.value = targetData;
+  },
+  selectOptionListHandler: () => {
+    for (
+      let index = 0;
+      index < autopopProperty.individualList.length;
+      index++
+    ) {
+      autopopProperty.individualList[index].addEventListener(
+        "click",
+        autopopProperty.autopopHandler
+      );
+    }
+  },
+  clearAutopopulate: () => {
+    const closeCallAction = autopopProperty.closeAction;
+    autopopProperty.inputField.value = "";
+    closeCallAction.classList.remove("showCloseAction");
+    autopopProperty.autpopLists.classList.remove("showDropdown");
+  },
+  toggleCloseAction: () => {
+    autopopProperty.mainInput.addEventListener("mouseover", () => {
+      const closeCallAction = autopopProperty.closeAction;
+      const value = autopopProperty.inputField.value;
+      if (value) {
+        closeCallAction.classList.add("showCloseAction");
+      }
+    });
+
+    autopopProperty.mainInput.addEventListener("mouseout", () => {
+      const closeCallAction = autopopProperty.closeAction;
+      closeCallAction.classList.remove("showCloseAction");
+    });
+  },
+  autoPopSearchHandler: (val) => {
+    const value = val;
+
+    autopopProperty.deSelectOptionList();
+
+    const lists = autopopProperty.individualList;
+    const listParent = autopopProperty.autpopList;
+
+    const closeCallAction = autopopProperty.closeAction;
+
+    if (value) {
+      closeCallAction.classList.add("showCloseAction");
+    } else {
+      closeCallAction.classList.remove("showCloseAction");
+    }
+
+    let count = 0;
+
+    const Inputvalue = autopopProperty.inputField.value.toLowerCase();
+
+    if (value.length >= 3) {
+      autopopProperty.autpopLists.classList.add("showDropdown");
+      for (let index = 0; index < lists.length; index++) {
+        const data = lists[index].children[0].children[0].textContent;
+
+        if (
+          data.toLowerCase().includes(value) ||
+          data.toLowerCase().includes(Inputvalue)
+        ) {
+          autopopProperty.autpopLists.classList.add("showDropdown");
+          lists[index].style.display = "block";
+        } else {
+          count++;
+          lists[index].style.display = "none";
+        }
+      }
+    } else {
+      autopopProperty.autpopLists.classList.remove("showDropdown");
+    }
+
+    if (count == lists.length) {
+      listParent.lastElementChild.style.display = "block";
+      autopopProperty.listHeading.style.display = "none";
+    } else {
+      listParent.lastElementChild.style.display = "none";
+      autopopProperty.listHeading.style.display = "block";
+    }
   },
 };
 
-const autoPopSearchHandler = (val) => {
-  const value = val;
+autopopProperty.closeAction.addEventListener(
+  "click",
+  autopopProperty.clearAutopopulate
+);
 
-  const lists = autopopProperty.individualList;
-  const listParent = autopopProperty.autpopList;
-
-  autopopProperty.deSelectOptionList();
-
-  const closeCallAction =
-    autopopProperty.inputFieldWidth.children[1].children[2];
-
-  if (value) {
-    closeCallAction.classList.add("showCloseAction");
-  } else {
-    closeCallAction.classList.remove("showCloseAction");
-  }
-
-  let count = 0;
-
-  const Inputvalue = autopopProperty.inputField.value.toLowerCase();
-
-  if (value.length > 3) {
-    autopopProperty.autpopLists.classList.add("showDropdown");
-    for (let index = 0; index < lists.length; index++) {
-      const data = lists[index].children[0].children[0].textContent;
-
-      if (
-        data.toLowerCase().includes(value) ||
-        data.toLowerCase().includes(Inputvalue)
-      ) {
-        autopopProperty.autpopLists.classList.add("showDropdown");
-        lists[index].style.display = "block";
-      } else {
-        count++;
-        lists[index].style.display = "none";
-      }
-    }
-  } else {
-    autopopProperty.autpopLists.classList.remove("showDropdown");
-  }
-
-  if (count == lists.length) {
-    listParent.lastElementChild.style.display = "block";
-    autopopProperty.listHeading.style.display = "none";
-  } else {
-    listParent.lastElementChild.style.display = "none";
-    autopopProperty.listHeading.style.display = "block";
-  }
-};
+autopopProperty.selectOptionListHandler();
+autopopProperty.toggleCloseAction();
 
 autopopProperty.triggerAutopopulateHandler();
 
 autopopProperty.widthMapping();
-
-const autopopHandler = (e) => {
-  autopopProperty.deSelectOptionList();
-  const targetInputField = autopopProperty.inputFieldWidth;
-
-  e.target.classList.add("currentSelectedList");
-  const targetData = e.target.children[0].children[0].textContent;
-  autopopProperty.inputField.value = targetData;
-};
-
-const clearAutopopulate = (e) => {
-  const closeCallAction =
-    autopopProperty.inputFieldWidth.children[1].children[2];
-  autopopProperty.inputField.value = "";
-  closeCallAction.classList.remove("showCloseAction");
-  autopopProperty.autpopLists.classList.remove("showDropdown");
-};
 
 autopopProperty.closeDropdownhandler();

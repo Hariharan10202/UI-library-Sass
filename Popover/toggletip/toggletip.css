@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: lato;
+}
+
+div[class$=ui-toggle-tip] {
+  margin: 20px;
+  position: relative;
+  display: inline-block;
+}
+div[class$=ui-toggle-tip] > div:first-child > * {
+  font-size: 16px;
+  border: 1px solid #afafaf;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+div[class$=ui-toggle-tip] > div[class*=toggle-tip] {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 200%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.1s ease-in;
+}
+div[class$=ui-toggle-tip] > div[class*=toggle-tip] * {
+  padding: 10px;
+  font-size: 13px;
+}
+div[class$=ui-toggle-tip] > div[class*=toggle-tip]::before {
+  content: "";
+  position: absolute;
+  top: -110%;
+  left: 50%;
+  margin-left: -20px;
+  border-width: 20px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+  transform: rotate(180deg);
+}
+div[class$=ui-toggle-tip] div[class*=showToggletip] {
+  opacity: 1;
+  pointer-events: all;
+}/*# sourceMappingURL=toggletip.css.map */

@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: lato;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+div[class$=ui-content-switcher] {
+  width: 500px;
+  position: absolute;
+  font-size: 0;
+  overflow: hidden;
+}
+div[class$=ui-content-switcher] > div:first-child {
+  border-radius: 4px;
+  border: 1px solid #333;
+}
+div[class$=ui-content-switcher] input {
+  display: none;
+}
+div[class$=ui-content-switcher] input:checked + label {
+  background: #333;
+  text-align: left;
+  color: #fff;
+}
+div[class$=ui-content-switcher] input#tab1:checked ~ .content-container #c1 {
+  opacity: 1;
+}
+div[class$=ui-content-switcher] input#tab2:checked ~ .content-container #c2 {
+  opacity: 1;
+}
+div[class$=ui-content-switcher] input#tab3:checked ~ .content-container #c3 {
+  opacity: 1;
+}
+div[class$=ui-content-switcher] label[class$=content-label] {
+  border: 1px solid #333;
+  display: inline-block;
+  font-size: 13px;
+  height: 36px;
+  line-height: 36px;
+  width: 166.6666666667px;
+  position: relative;
+  transition: transistion;
+  cursor: pointer;
+  color: #333;
+  background: #fff;
+  text-align: left;
+  padding-left: 10px;
+}
+div[class$=ui-content-switcher] > label:first-child {
+  border-radius: 4px;
+  background-color: red;
+}
+div[class$=ui-content-switcher] > label:last-child {
+  border-radius: 4px;
+}
+div[class$=ui-content-switcher] > div:last-child {
+  background: #fff;
+  position: relative;
+  height: 100px;
+  font-size: 16px;
+}
+div[class$=ui-content-switcher] > div:last-child div {
+  position: absolute;
+  padding: 10px;
+  top: 0;
+  opacity: 0;
+  transition: 0.25s ease;
+  color: #333;
+}
+div[class$=ui-content-switcher] > div:last-child div h3 {
+  font-weight: 200;
+  margin: 10px 0;
+}
+div[class$=ui-content-switcher] > div:last-child div p {
+  margin: 10px 0;
+}
+div[class$=ui-content-switcher] > div:last-child div p {
+  font-size: 13px;
+}/*# sourceMappingURL=tabbedNav.css.map */

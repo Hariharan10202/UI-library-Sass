@@ -12,10 +12,9 @@
 
 div[class$="growInput-icon"] {
   position: relative;
-  margin: 20px;
 
   @include display-flex(flex-start, flex-start, 10px, row);
-  div {
+  & > div:first-child {
     small {
       @include icon-large;
       @include userprofile;
@@ -56,10 +55,7 @@ div[class$="growInput-icon"] {
   }
 
   div[class$="helper-text"] {
-    span {
-      font-size: $font-s;
-      position: absolute;
-    }
+    @include helper-text;
   }
 
   div[class*="showDropdown"] {

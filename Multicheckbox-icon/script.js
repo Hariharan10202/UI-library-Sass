@@ -1,14 +1,28 @@
 const multiSelectProperty = {
-  inputField: document.querySelector(".inp-l"),
-  mainInput: document.querySelector(".mainInput"),
-  doneBtn: document.querySelector(".doneBtn"),
-  inputFieldWidth: document.querySelector(".inp-l"),
-  selectList: document.querySelector(".multiSelect-list"),
-  selectLists: document.querySelector(".multiSelect-lists"),
-  individualList: document.querySelectorAll(".ind-li"),
-  multiSelect: document.querySelector(".multiSelect"),
-  listHeading: document.querySelector(".li-head-wrap"),
-  tooltip: document.querySelector(".tooltip"),
+  mainComponent: document.querySelector(".multiSelect-label-icon"),
+  inputField: document.querySelector(".multiSelect-label-icon").lastElementChild
+    .firstElementChild,
+  mainInput: document.querySelector(".multiSelect-label-icon").lastElementChild
+    .firstElementChild.lastElementChild,
+  doneBtn: document.querySelector(".multiSelect-label-icon").lastElementChild
+    .lastElementChild.previousElementSibling.firstElementChild.lastElementChild,
+  selectList: document.querySelector(".multiSelect-label-icon").lastElementChild
+    .lastElementChild.previousElementSibling.firstElementChild.lastElementChild
+    .previousElementSibling,
+  selectLists: document.querySelector(".multiSelect-label-icon")
+    .lastElementChild.lastElementChild.previousElementSibling.firstElementChild,
+  individualList: document
+    .querySelector(".multiSelect-label-icon")
+    .lastElementChild.lastElementChild.previousElementSibling.firstElementChild.lastElementChild.previousElementSibling.querySelectorAll(
+      ".ind-li"
+    ),
+  multiSelect: document.querySelector(".multiSelect-label-icon")
+    .lastElementChild,
+  listHeading: document.querySelector(".multiSelect-label-icon")
+    .lastElementChild.lastElementChild.previousElementSibling.firstElementChild
+    .firstElementChild.lastElementChild,
+  tooltip: document.querySelector(".multiSelect-label-icon").lastElementChild
+    .lastElementChild,
   MultiSelectList: [],
   deSelectedColor: () => {
     return "white";
@@ -16,59 +30,126 @@ const multiSelectProperty = {
   SelectedColor: () => {
     return "#e6effc";
   },
-};
+  closeDropdownhandler: () => {
+    document.addEventListener("click", function (event) {
+      let target = event.target;
 
-const MultiSelectHandler = () => {
-  for (
-    let index = 0;
-    index < multiSelectProperty.selectList.children.length;
-    index++
-  ) {
-    const targetElement =
-      multiSelectProperty.selectList.children[index].children[0].children[0];
+      const targetElement1 = "." + multiSelectProperty.selectLists.classList[0];
+      const targetElement2 = "." + multiSelectProperty.mainInput.classList[0];
 
-    const targetData =
-      multiSelectProperty.selectList.children[index].children[0].children[1]
-        ?.textContent;
+      console.log(
+        !target.closest(targetElement1),
+        !target.closest(targetElement2)
+      );
 
-    multiSelectProperty.selectList.children[index].addEventListener(
-      "click",
-      () => {
-        if (targetElement) {
-          targetElement.checked =
-            targetElement?.checked === true ? false : true;
-
-          if (targetElement?.checked) {
-            multiSelectProperty.selectList.children[
-              index
-            ].style.backgroundColor = multiSelectProperty.SelectedColor();
-          } else {
-            multiSelectProperty.selectList.children[
-              index
-            ].style.backgroundColor = multiSelectProperty.deSelectedColor();
-          }
-
-          multiSelectProperty.inputField = document.querySelector(".inp-l");
-
-          if (!multiSelectProperty.MultiSelectList.includes(targetData)) {
-            multiSelectProperty.MultiSelectList.push(targetData);
-            multiSelectProperty.inputField.children[1].children[0].value =
-              multiSelectProperty.MultiSelectList.join(",");
-          }
-
-          if (!targetElement?.checked) {
-            const index =
-              multiSelectProperty.MultiSelectList.indexOf(targetData);
-            multiSelectProperty.MultiSelectList.splice(index, 1);
-            multiSelectProperty.inputField.children[1].children[0].value =
-              multiSelectProperty.MultiSelectList.join(",");
-          }
-          TooltipHandler();
-        }
+      if (!target.closest(targetElement1) && !target.closest(targetElement2)) {
+        multiSelectProperty.selectLists.classList.remove("showDropdown");
       }
+    });
+  },
+  clearAllHandler: (e) => {
+    const lists = multiSelectProperty.individualList;
+
+    for (let index = 0; index < lists.length; index++) {
+      lists[index].style.backgroundColor =
+        multiSelectProperty.deSelectedColor();
+      lists[index].children[0].children[0].checked = false;
+      multiSelectProperty.MultiSelectList = [];
+      multiSelectProperty.inputField.children[1].children[0].value = "";
+    }
+    TooltipHandler();
+  },
+  selectAllHandler: (e) => {
+    const lists = multiSelectProperty.individualList;
+
+    multiSelectProperty.MultiSelectList = [];
+    multiSelectProperty.inputField.children[1].children[0].value = "";
+
+    for (let index = 0; index < lists.length; index++) {
+      const targetElement = lists[index].children[0].children[0];
+
+      const targetData = lists[index].children[0].children[1]?.textContent;
+
+      lists[index].style.backgroundColor = multiSelectProperty.SelectedColor();
+      targetElement.checked = true;
+      multiSelectProperty.MultiSelectList.push(targetData);
+    }
+    multiSelectProperty.inputField.children[1].children[0].value =
+      multiSelectProperty.MultiSelectList.join(",");
+    TooltipHandler();
+  },
+  MultiSelectHandler: () => {
+    for (
+      let index = 0;
+      index < multiSelectProperty.selectList.children.length;
+      index++
+    ) {
+      const targetElement =
+        multiSelectProperty.selectList.children[index].children[0].children[0];
+
+      const targetData =
+        multiSelectProperty.selectList.children[index].children[0].children[1]
+          ?.textContent;
+
+      multiSelectProperty.selectList.children[index].addEventListener(
+        "click",
+        () => {
+          if (targetElement) {
+            targetElement.checked =
+              targetElement?.checked === true ? false : true;
+
+            if (targetElement?.checked) {
+              multiSelectProperty.selectList.children[
+                index
+              ].style.backgroundColor = multiSelectProperty.SelectedColor();
+            } else {
+              multiSelectProperty.selectList.children[
+                index
+              ].style.backgroundColor = multiSelectProperty.deSelectedColor();
+            }
+
+            multiSelectProperty.inputField = multiSelectProperty.inputField;
+
+            if (!multiSelectProperty.MultiSelectList.includes(targetData)) {
+              multiSelectProperty.MultiSelectList.push(targetData);
+              multiSelectProperty.inputField.children[1].children[0].value =
+                multiSelectProperty.MultiSelectList.join(",");
+            }
+
+            if (!targetElement?.checked) {
+              const index =
+                multiSelectProperty.MultiSelectList.indexOf(targetData);
+              multiSelectProperty.MultiSelectList.splice(index, 1);
+              multiSelectProperty.inputField.children[1].children[0].value =
+                multiSelectProperty.MultiSelectList.join(",");
+            }
+            TooltipHandler();
+          }
+        }
+      );
+    }
+  },
+  toggleDropdownHandler: (e) => {
+    e.target.parentElement.nextElementSibling.nextElementSibling.children[0].classList.toggle(
+      "showDropdown"
     );
-  }
+  },
 };
+
+multiSelectProperty.mainInput.addEventListener(
+  "click",
+  multiSelectProperty.toggleDropdownHandler
+);
+
+multiSelectProperty.listHeading.firstElementChild.lastElementChild.firstElementChild.addEventListener(
+  "click",
+  multiSelectProperty.clearAllHandler
+);
+
+multiSelectProperty.listHeading.firstElementChild.lastElementChild.lastElementChild.addEventListener(
+  "click",
+  multiSelectProperty.selectAllHandler
+);
 
 // const widthMapping = () => {
 //   const width = multiSelectProperty.inputField.children[1].offsetWidth;
@@ -80,12 +161,6 @@ const MultiSelectHandler = () => {
 // };
 
 // widthMapping();
-
-const toggleDropdownHandler = (e) => {
-  e.target.parentElement.nextElementSibling.nextElementSibling.children[0].classList.toggle(
-    "showDropdown"
-  );
-};
 
 const toggleTooltipHandler = () => {
   multiSelectProperty.inputField.addEventListener("mouseover", () => {
@@ -108,9 +183,8 @@ const TooltipHandler = () => {
     );
   }
 
-  const tooltipContent = document.createElement("div");
-
   if (multiSelectProperty.MultiSelectList.length != 0) {
+    const tooltipContent = document.createElement("div");
     for (
       let index = 0;
       index < multiSelectProperty.MultiSelectList.length;
@@ -125,39 +199,7 @@ const TooltipHandler = () => {
   }
 };
 
-const clearAllHandler = (e) => {
-  const lists = multiSelectProperty.individualList;
-
-  for (let index = 0; index < lists.length; index++) {
-    lists[index].style.backgroundColor = multiSelectProperty.deSelectedColor();
-    lists[index].children[0].children[0].checked = false;
-    multiSelectProperty.MultiSelectList = [];
-    multiSelectProperty.inputField.children[1].children[0].value = "";
-  }
-  TooltipHandler();
-};
-
-const selectAllHandler = (e) => {
-  const lists = multiSelectProperty.individualList;
-
-  multiSelectProperty.MultiSelectList = [];
-  multiSelectProperty.inputField.children[1].children[0].value = "";
-
-  for (let index = 0; index < lists.length; index++) {
-    const targetElement = lists[index].children[0].children[0];
-
-    const targetData = lists[index].children[0].children[1]?.textContent;
-
-    lists[index].style.backgroundColor = multiSelectProperty.SelectedColor();
-    targetElement.checked = true;
-    multiSelectProperty.MultiSelectList.push(targetData);
-  }
-  multiSelectProperty.inputField.children[1].children[0].value =
-    multiSelectProperty.MultiSelectList.join(",");
-  TooltipHandler();
-};
-
-MultiSelectHandler();
+multiSelectProperty.MultiSelectHandler();
 
 const multiSelectSearchhandler = (e) => {
   const value = e.target.value.toLowerCase();
@@ -190,27 +232,8 @@ const multiSelectSearchhandler = (e) => {
   }
 };
 
-const closeDropdownhandler = () => {
-  document.addEventListener("click", function (event) {
-    let target = event.target;
-
-    const targetElement1 = "." + multiSelectProperty.selectLists.classList[0];
-    const targetElement2 = "." + multiSelectProperty.mainInput.classList[0];
-    const targetElement3 = "." + multiSelectProperty.doneBtn.classList[0];
-
-    console.log(
-      !target.closest(targetElement1),
-      !target.closest(targetElement2)
-    );
-
-    if (!target.closest(targetElement1) && !target.closest(targetElement2)) {
-      multiSelectProperty.selectLists.classList.remove("showDropdown");
-    }
-  });
-};
-
 multiSelectProperty.doneBtn.addEventListener("click", () => {
   multiSelectProperty.selectLists.classList.remove("showDropdown");
 });
 
-closeDropdownhandler();
+multiSelectProperty.closeDropdownhandler();

@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: lato;
+}
+
+div[class$=ui-tooltip] > div:first-child > * {
+  font-size: 16px;
+}
+div[class$=ui-tooltip] > div:first-child:hover + div[class$=tooltip] {
+  pointer-events: all;
+  transform: scale(100%);
+}
+div[class$=ui-tooltip] > div[class$=tooltip] {
+  background-color: #333;
+  padding: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 13px;
+  pointer-events: none;
+  transition: 0.1s ease-in;
+  transform: scale(0);
+}/*# sourceMappingURL=popover.css.map */

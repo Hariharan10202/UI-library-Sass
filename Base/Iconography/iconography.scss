@@ -36,6 +36,7 @@
   background-position: 0px -24px;
   filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%)
     hue-rotate(325deg) brightness(89%) contrast(105%);
+  cursor: pointer;
 }
 
 @mixin close-xsmall {
@@ -92,8 +93,8 @@
 }
 
 @mixin icon-error() {
-  filter: brightness(0) saturate(100%) invert(14%) sepia(92%) saturate(7474%)
-    hue-rotate(356deg) brightness(117%) contrast(120%);
+  filter: brightness(0) saturate(100%) invert(54%) sepia(50%) saturate(5688%)
+    hue-rotate(328deg) brightness(99%) contrast(132%);
 }
 
 @mixin icon-hyper() {
@@ -114,4 +115,19 @@
 @mixin icon-hovered() {
   filter: brightness(0) saturate(100%) invert(99%) sepia(5%) saturate(506%)
     hue-rotate(233deg) brightness(114%) contrast(100%);
+}
+
+@mixin icon-info() {
+  filter: brightness(0) saturate(100%) invert(32%) sepia(58%) saturate(1834%)
+    hue-rotate(199deg) brightness(92%) contrast(86%);
+}
+
+@mixin icon-warning() {
+  filter: brightness(0) saturate(100%) invert(59%) sepia(66%) saturate(540%)
+    hue-rotate(350deg) brightness(98%) contrast(88%);
+}
+
+@mixin icon-success() {
+  filter: brightness(0) saturate(100%) invert(60%) sepia(10%) saturate(3555%)
+    hue-rotate(72deg) brightness(103%) contrast(58%);
 }

@@ -16,13 +16,12 @@
 }
 
 div[class$="twoline-multiSelect-label-icon"] {
-  margin: 20px;
   width: $width-fit;
   position: relative;
 
   @include display-flex(flex-start, center, 10px, row);
 
-  div {
+  & > div:first-child {
     small {
       @include icon-large;
       @include userprofile;
@@ -35,9 +34,7 @@ div[class$="twoline-multiSelect-label-icon"] {
     }
 
     div[class$="helper-text"] {
-      span {
-        font-size: $font-s;
-      }
+      @include helper-text;
     }
   }
 

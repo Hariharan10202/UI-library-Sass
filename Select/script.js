@@ -1,7 +1,12 @@
 SelectProperty = {
-  selectLists: document.querySelector(".select-lists"),
-  inputField: document.querySelector(".inp-l"),
-  mainInput: document.querySelector(".mainInput"),
+  mainComponent: document.querySelector(".select"),
+  inputField: document.querySelector(".select").firstElementChild,
+  mainInput:
+    document.querySelector(".select").firstElementChild.lastElementChild,
+  selectLists: document.querySelector(".select").lastElementChild,
+  individualList: document
+    .querySelector(".select")
+    .lastElementChild.querySelectorAll(".inp-li"),
   closeDropdownhandler: () => {
     document.addEventListener("click", function (event) {
       console.log("in");
@@ -30,23 +35,32 @@ SelectProperty = {
       SelectProperty.selectLists.classList.toggle("showDropdown");
     });
   },
+  selectHandler: (e) => {
+    for (
+      let index = 0;
+      index < SelectProperty.selectLists.children.length;
+      index++
+    ) {
+      SelectProperty.selectLists.children[index].classList?.remove(
+        "currentSelectedList"
+      );
+    }
+
+    e.target.classList.add("currentSelectedList");
+    const value = e.target.children[0].children[0].textContent;
+    SelectProperty.inputField.children[1].children[0].value = value;
+  },
+  optionSelectList: () => {
+    for (let index = 0; index < SelectProperty.individualList.length; index++) {
+      SelectProperty.individualList[index].addEventListener(
+        "click",
+        SelectProperty.selectHandler
+      );
+    }
+  },
 };
 
-const selectHandler = (e) => {
-  for (
-    let index = 0;
-    index < SelectProperty.selectLists.children.length;
-    index++
-  ) {
-    SelectProperty.selectLists.children[index].classList?.remove(
-      "currentSelectedList"
-    );
-  }
-
-  e.target.classList.add("currentSelectedList");
-  const value = e.target.children[0].children[0].textContent;
-  SelectProperty.inputField.children[1].children[0].value = value;
-};
+SelectProperty.optionSelectList();
 
 SelectProperty.showDropdown();
 

@@ -1,0 +1,98 @@
+@use "../Base/Misc/Misc.scss" as *;
+@use "../UI_Elements/Elements/InputField/inputFIeld.scss" as *;
+@use "../UI_Elements/Elements/Dropdown/Dropdown_anatomy.scss" as *;
+@use "../Base/Typography/typography.scss" as *;
+@use "../Base/Colors/color.scss" as *;
+@use "../Base/Borders/borderproperty.scss" as *;
+@use "../Base/Spacing/spacing.scss" as *;
+
+* {
+  @include begin;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+$contentCount: 3;
+$containerWidth: 500px;
+
+@mixin calculate-width {
+  width: calc($containerWidth / $contentCount);
+}
+
+div[class$="ui-content-switcher"] {
+  width: $containerWidth;
+  position: $poa;
+  font-size: 0;
+  // border-radius: $radius;
+  overflow: $overflow-hidden;
+
+  & > div:first-child {
+    border-radius: 4px;
+    border: 1px solid #333;
+  }
+  input {
+    display: $display-none;
+    &:checked + label {
+      background: $black;
+      text-align: left;
+      color: $white;
+    }
+    @for $i from 1 through $contentCount {
+      &#tab#{$i}:checked {
+        ~ .content-container #c#{$i} {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  label[class$="content-label"] {
+    border: 1px solid $black;
+    display: inline-block;
+    font-size: $font-m;
+    height: 36px;
+    line-height: $height;
+    @include calculate-width();
+    position: $por;
+    transition: transistion;
+    cursor: $pointer;
+    color: $black;
+    background: $white;
+    text-align: left;
+    padding-left: $p-10;
+  }
+  & > label:first-child {
+    border-radius: 4px;
+    background-color: red;
+  }
+
+  & > label:last-child {
+    border-radius: 4px;
+  }
+
+  & > div:last-child {
+    background: $white;
+    position: relative;
+    height: 100px;
+    font-size: 16px;
+    div {
+      position: absolute;
+      padding: 10px;
+      top: 0;
+      opacity: 0;
+      transition: 0.25s ease;
+      color: $black;
+      h3 {
+        font-weight: 200;
+        margin: 10px 0;
+      }
+      p {
+        margin: 10px 0;
+      }
+      p {
+        font-size: $font-m;
+      }
+    }
+  }
+}

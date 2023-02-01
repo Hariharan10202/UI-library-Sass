@@ -11,10 +11,9 @@
 
 div[class$="autopop-icon"] {
   position: relative;
-  margin: 20px;
 
   @include display-flex(flex-start, flex-start, 10px, row);
-  div {
+  & div {
     small {
       @include icon-large;
       @include userprofile;

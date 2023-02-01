@@ -7,7 +7,6 @@
 
 div[class$=twoline-autopop] {
   position: relative;
-  margin: 20px;
 }
 div[class$=twoline-autopop] div[class=inp-l] {
   display: flex;
@@ -31,6 +30,9 @@ div[class$=twoline-autopop] div[class=inp-l] div:nth-child(2) {
   height: 36px;
   cursor: pointer;
 }
+div[class$=twoline-autopop] div[class=inp-l] div:nth-child(2):focus-within {
+  border: 1px solid #42a5f5;
+}
 div[class$=twoline-autopop] div[class=inp-l] div:nth-child(2) div[class$=twoline-inn] {
   border: none;
   display: flex;
@@ -44,6 +46,15 @@ div[class$=twoline-autopop] div[class=inp-l] div:nth-child(2) div[class$=twoline
   outline: none;
   font-size: 13px;
   pointer-events: all;
+}
+div[class$=twoline-autopop] div[class=inp-l] div:nth-child(2) div[class$=twoline-inn] input::-moz-placeholder {
+  font-style: italic;
+}
+div[class$=twoline-autopop] div[class=inp-l] div:nth-child(2) div[class$=twoline-inn] input:-ms-input-placeholder {
+  font-style: italic;
+}
+div[class$=twoline-autopop] div[class=inp-l] div:nth-child(2) div[class$=twoline-inn] input::placeholder {
+  font-style: italic;
 }
 div[class$=twoline-autopop] div[class=inp-l] div:nth-child(2) div[class$=twoline-inn] span {
   display: none;
@@ -72,6 +83,7 @@ div[class$=twoline-autopop] div[class=inp-l] div:nth-child(2) small:last-child {
   gap: 0px;
   background-position: 0px -24px;
   filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(21%) hue-rotate(325deg) brightness(89%) contrast(105%);
+  cursor: pointer;
   opacity: 0;
   transition: 0.1s ease-in;
 }
@@ -102,28 +114,28 @@ div[class$=twoline-autopop] div[class*=twoline-autopop-lists] li {
   cursor: pointer;
   background-color: #fff;
 }
-div[class$=twoline-autopop] div[class*=twoline-autopop-lists] li div {
+div[class$=twoline-autopop] div[class*=twoline-autopop-lists] li > div {
   pointer-events: none;
-  padding: 10px;
+  padding: 20px;
   width: auto;
   height: 56px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: row;
-  gap: 5px;
+  gap: 10px;
 }
-div[class$=twoline-autopop] div[class*=twoline-autopop-lists] li div div {
+div[class$=twoline-autopop] div[class*=twoline-autopop-lists] li > div div {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 5px;
 }
-div[class$=twoline-autopop] div[class*=twoline-autopop-lists] li div div span:first-child {
+div[class$=twoline-autopop] div[class*=twoline-autopop-lists] li > div div span:first-child {
   font-size: 13px;
 }
-div[class$=twoline-autopop] div[class*=twoline-autopop-lists] li div div span:last-child {
+div[class$=twoline-autopop] div[class*=twoline-autopop-lists] li > div div span:last-child {
   font-size: 11px;
 }
 div[class$=twoline-autopop] div[class*=twoline-autopop-lists] li:hover {
@@ -170,6 +182,9 @@ div[class$=twoline-autopop] div[class*=twoline-autopop-lists] div[class$=twoline
   font-weight: 600;
   color: black;
   font-size: 13px;
+}
+div[class$=twoline-autopop] div[class$=helper-text] {
+  margin-top: 5px;
 }
 div[class$=twoline-autopop] div[class$=helper-text] span {
   font-size: 11px;

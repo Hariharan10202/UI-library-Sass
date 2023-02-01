@@ -6,7 +6,6 @@
 }
 
 div[class$=Accordion] {
-  margin: 20px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;

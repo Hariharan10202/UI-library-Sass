@@ -1,0 +1,148 @@
+@use "../../../Base/Misc/Misc.scss" as *;
+@use "../../../Base/Typography/typography.scss" as *;
+@use "../../../Base/Iconography/iconography.scss" as *;
+@use "../../../Base/Alignment_mixin/alignment.scss" as *;
+@use "../../../Base/Borders/borderproperty.scss" as *;
+@use "../../../Base/Spacing/spacing.scss" as *;
+@use "../../../Base/Colors/color.scss" as *;
+
+@mixin notify {
+  position: $poa;
+  top: 10px;
+  right: 10px;
+  @include display-flex(center, center, 0, row);
+  width: $width-fit;
+  height: $height;
+  @include hideNotify;
+  border-radius: $radius;
+  z-index: $z-99;
+
+  div[class*="error-notify"] {
+    @include error-notify;
+  }
+
+  div[class*="info-notify"] {
+    @include info-notify;
+  }
+
+  div[class*="warning-notify"] {
+    @include warning-notify;
+  }
+
+  div[class*="success-notify"] {
+    @include success-notify;
+  }
+}
+
+@mixin showNotify {
+  opacity: $opacity-1;
+  transform: translateY(0px);
+}
+
+@mixin hideNotify {
+  opacity: $opacity-0;
+  transform: translateY(-10px);
+  transition: $transistion;
+}
+
+@mixin error-notify {
+  background-color: $error-bg;
+  border: $error-border;
+  border-radius: $radius;
+  padding: $p-10;
+  @include display-flex(center, center, 50px, row);
+  & > div {
+    @include display-flex(center, center, 10px, row);
+    small {
+      @include icon-small;
+      @include icon-error;
+    }
+    span {
+      font-size: $font-m;
+      color: $error;
+    }
+  }
+  & > small {
+    @include icon-small;
+    @include close-small;
+    @include icon-error;
+  }
+}
+
+@mixin info-notify {
+  background-color: $info-bg;
+  border: $info-border;
+  border-radius: $radius;
+  padding: $p-10;
+  @include display-flex(center, center, 50px, row);
+  & > div {
+    @include display-flex(center, center, 10px, row);
+    small {
+      @include icon-small;
+      @include icon-info;
+    }
+    span {
+      font-size: $font-m;
+      color: $info;
+    }
+  }
+  & > small {
+    @include icon-small;
+    @include close-small;
+    @include icon-info;
+  }
+}
+
+@mixin warning-notify {
+  background-color: $warning-bg;
+  border: $warning-border;
+  border-radius: $radius;
+  padding: $p-10;
+  @include display-flex(center, center, 50px, row);
+  & > div {
+    @include display-flex(center, center, 10px, row);
+    small {
+      @include icon-small;
+      @include icon-warning;
+    }
+    span {
+      font-size: $font-m;
+      color: $warning;
+      b {
+        text-decoration: underline;
+        color: inherit;
+        font-style: $font-italic;
+        cursor: $pointer;
+      }
+    }
+  }
+  & > small {
+    @include icon-small;
+    @include close-small;
+    @include icon-warning;
+  }
+}
+
+@mixin success-notify {
+  background-color: $success-bg;
+  border: $success-border;
+  border-radius: $radius;
+  padding: $p-10;
+  @include display-flex(center, center, 50px, row);
+  & > div {
+    @include display-flex(center, center, 10px, row);
+    small {
+      @include icon-small;
+      @include icon-success;
+    }
+    span {
+      font-size: $font-m;
+      color: $success;
+    }
+  }
+  & > small {
+    @include icon-small;
+    @include close-small;
+    @include icon-success;
+  }
+}

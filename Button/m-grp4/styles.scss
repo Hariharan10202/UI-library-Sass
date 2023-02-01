@@ -1,0 +1,79 @@
+@use "../Button_Anatomy/button_anatomy.scss" as *;
+@use "../Button_Anatomy/button-styles.scss" as *;
+
+@use "../../Base/Alignment_mixin/alignment.scss" as *;
+@use "../../Base/Iconography/iconography.scss" as *;
+@use "../../Base/Misc/Misc.scss" as *;
+
+* {
+  @include begin;
+}
+
+div[class$="container"] {
+  margin-top: 20px;
+  @include display-flex(center, center, 0, column);
+}
+
+div[class="m-btn-g"] {
+  @include display-flex(center, center, 20px, row);
+
+  button {
+    display: none;
+  }
+
+  button[class="pri-btn"],
+  button[class="sec-btn"],
+  button[class="ter-btn"] {
+    @include button;
+  }
+
+  button[class="pri-btn"] {
+    div:first-child {
+      @include display-flex(center, center, 5px);
+    }
+    @include primary-button;
+    small:first-child {
+      @include icon-small;
+      @include downarrow;
+    }
+    small:last-child {
+      @include icon-small;
+      // @include userprofile;
+    }
+  }
+
+  button[class="sec-btn"] {
+    div:first-child {
+      @include display-flex(center, center, 5px);
+    }
+    @include secondary-button;
+    small:first-child {
+      @include icon-small;
+      @include downarrow;
+    }
+    small:last-child {
+      @include icon-small;
+      // @include userprofile;
+    }
+
+    &:hover {
+      small {
+        @include icon-hovered;
+      }
+    }
+  }
+  button[class="ter-btn"] {
+    div:first-child {
+      @include display-flex(center, center, 5px);
+    }
+    @include tertiary-button;
+    small:first-child {
+      @include icon-small;
+      @include downarrow;
+    }
+    small:last-child {
+      @include icon-small;
+      // @include userprofile;
+    }
+  }
+}

@@ -32,8 +32,9 @@
   box-shadow: $box-shadow;
   background-color: $white;
   border-radius: $radius;
+  z-index: $z-99;
 
-  div:nth-child(1) {
+  & > div:nth-child(1) {
     @include display-flex(center, space-between, 0, row);
     padding: $p-20;
     border-bottom: $input-border;
@@ -48,15 +49,19 @@
       cursor: $pointer;
     }
   }
-  div:nth-child(2) {
+  & > div:nth-child(2) {
     padding: $p-20;
     border-bottom: $input-border;
     @include display-flex(flex-start, flex-start, 10px, column);
     h2 {
       font-size: $font-xm;
     }
+    p {
+      font-size: $font-m;
+      line-height: $p-20;
+    }
   }
-  div:nth-child(3) {
+  & > div:nth-child(3) {
     padding: $p-20;
 
     @include display-flex(flex-start, flex-end, 20px, row);
@@ -88,7 +93,7 @@
   background-color: $white;
   border-radius: $radius;
 
-  div:nth-child(1) {
+  & > div:nth-child(1) {
     padding: $p-20;
     border-bottom: $input-border;
     h2 {
@@ -96,7 +101,7 @@
     }
   }
 
-  div:nth-child(2) {
+  & > div:nth-child(2) {
     padding: $p-20;
 
     @include display-flex(flex-start, flex-end, 20px, row);

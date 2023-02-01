@@ -1,11 +1,25 @@
-growInputProperty = {
-  inputFieldWidth: document.querySelector(".inp-l"),
-  mainInput: document.querySelector(".growing-inp"),
-  inputField: document.querySelector(".inp-l").children[1].children[0],
-  autpopList: document.querySelector(".growInput-list"),
-  autpopLists: document.querySelector(".growInput-lists"),
-  individualList: document.querySelectorAll(".ind-li"),
-  listHeading: document.querySelector(".li-head-wrap"),
+const growInputProperty = {
+  mainComponent: document.querySelector(".growInput-icon"),
+  inputFieldWidth:
+    document.querySelector(".growInput-icon").lastElementChild
+      .firstElementChild,
+  mainInput:
+    document.querySelector(".growInput-icon").lastElementChild.firstElementChild
+      .lastElementChild,
+  inputField:
+    document.querySelector(".growInput-icon").lastElementChild.firstElementChild
+      .lastElementChild.firstElementChild,
+  autpopList:
+    document.querySelector(".growInput-icon").lastElementChild.lastElementChild
+      .lastElementChild,
+  autpopLists:
+    document.querySelector(".growInput-icon").lastElementChild.lastElementChild,
+  individualList: document
+    .querySelector(".growInput")
+    .lastElementChild.lastElementChild.querySelectorAll(".ind-li"),
+  listHeading:
+    document.querySelector(".growInput-icon").lastElementChild.lastElementChild
+      .firstElementChild,
   optionList: [],
   deSelectOptionList: () => {
     for (
@@ -54,11 +68,44 @@ growInputProperty = {
     }
   },
   triggerAutopopulateHandler: () => {
-    growInputProperty.inputField.addEventListener("keyup", (e) => {
+    console.log(growInputProperty.inputField);
+    growInputProperty.mainInput.children[0].addEventListener("keyup", (e) => {
       growInputSearchHandler(e.target.value);
     });
   },
+  growInputHandler: (e) => {
+    e.target.classList.add("currentDisabledList");
+    console.log(e.target);
+
+    const targetData = e.target.children[0].children[0].textContent;
+
+    const newNode = growInputProperty.createChipHandler(targetData);
+
+    growInputProperty.optionList.push(targetData);
+
+    growInputProperty.inputFieldWidth.children[1].insertBefore(
+      newNode,
+      growInputProperty.inputFieldWidth.children[1].lastElementChild
+    );
+
+    growInputProperty.inputField.value = "";
+    growInputProperty.widthMapping();
+  },
+  optionSelectHandler: () => {
+    for (
+      let index = 0;
+      index < growInputProperty.individualList.length;
+      index++
+    ) {
+      growInputProperty.individualList[index].addEventListener(
+        "click",
+        growInputProperty.growInputHandler
+      );
+    }
+  },
 };
+
+growInputProperty.optionSelectHandler();
 
 const growInputSearchHandler = (val) => {
   const value = val;
@@ -68,9 +115,10 @@ const growInputSearchHandler = (val) => {
 
   let count = 0;
 
-  const Inputvalue = growInputProperty.inputField.value.toLowerCase();
+  const Inputvalue =
+    growInputProperty.mainInput.lastElementChild.value.toLowerCase();
 
-  if (value.length > 3) {
+  if (value.length >= 3) {
     growInputProperty.autpopLists.classList.add("showDropdown");
     for (let index = 0; index < lists.length; index++) {
       const data = lists[index].children[0].children[0].textContent;
@@ -102,33 +150,6 @@ const growInputSearchHandler = (val) => {
 growInputProperty.triggerAutopopulateHandler();
 
 growInputProperty.widthMapping();
-
-const growInputHandler = (e) => {
-  e.target.classList.add("currentDisabledList");
-  console.log(e.target);
-
-  const targetData = e.target.children[0].children[0].textContent;
-
-  const newNode = growInputProperty.createChipHandler(targetData);
-
-  growInputProperty.optionList.push(targetData);
-
-  growInputProperty.inputFieldWidth.children[1].insertBefore(
-    newNode,
-    growInputProperty.inputFieldWidth.children[1].lastElementChild
-  );
-
-  growInputProperty.inputField.value = "";
-  growInputProperty.widthMapping();
-};
-
-// const clearAutopopulate = (e) => {
-//   const closeCallAction =
-//     growInputProperty.inputFieldWidth.children[1].children[2];
-//   growInputProperty.inputField.value = "";
-//   closeCallAction.classList.remove("showCloseAction");
-//   growInputProperty.autpopLists.classList.remove("showDropdown");
-// };
 
 const chipRemoveHandler = (e) => {
   const targetData = e.target.previousElementSibling.textContent;

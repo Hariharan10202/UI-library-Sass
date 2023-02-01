@@ -9,7 +9,6 @@
 
 div[class$="autopop"] {
   position: relative;
-  margin: 20px;
 
   div[class="inp-l"] {
     @include autopop-inp;
@@ -44,10 +43,7 @@ div[class$="autopop"] {
   }
 
   div[class$="helper-text"] {
-    span {
-      font-size: $font-s;
-      position: absolute;
-    }
+    @include helper-text;
   }
 
   div[class*="showDropdown"] {

@@ -32,9 +32,8 @@ div[class$="select-label"] {
 // Select - Label - Icon
 
 div[class$="select-label-icon"] {
-  margin: 20px;
   @include display-flex(flex-start, flex-start, 10px, row);
-  div {
+  & > div:first-child {
     small {
       @include icon-large;
       @include userprofile;
